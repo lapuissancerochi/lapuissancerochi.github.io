@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zapfack Foka Joy Rochnel — Développeur Full-Stack</title>
-  <meta name="description" content="Portfolio de Zapfack Foka Joy Rochnel – Développeur Full-Stack spécialisé Django, React, React Native, Expo et Node.js. Partenaire DonaAyem Tech." />
+  <meta name="description" content="Portfolio officiel de Zapfack Foka Joy Rochnel – Développeur Full-Stack spécialisé en Django, React, React Native, Expo, Node.js et Next.js. Partenaire DonaAyem Tech." />
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -81,8 +81,8 @@
             'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.5px', fontWeight: '500' }],
           },
           transitionDuration: {
-            'state-change': '150ms',
-            'surface-enter': '240ms',
+            'state-change': '180ms',
+            'surface-enter': '300ms',
           },
           transitionTimingFunction: {
             'state-change': 'ease-out',
@@ -120,7 +120,7 @@
           <i class="fa-solid fa-code text-xs text-primary/70"></i> Compétences
         </a>
         <a href="#projets" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change flex items-center gap-1.5">
-          <i class="fa-solid fa-layer-group text-xs text-primary/70"></i> Projets
+          <i class="fa-solid fa-layer-group text-xs text-primary/70"></i> Projets en ligne
         </a>
         <a href="#parcours" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change flex items-center gap-1.5">
           <i class="fa-solid fa-timeline text-xs text-primary/70"></i> Parcours
@@ -156,7 +156,7 @@
         <i class="fa-solid fa-code w-5 text-primary"></i> Compétences
       </a>
       <a href="#projets" class="mobile-nav-link flex items-center gap-3 py-2 text-on-surface font-label text-label-lg hover:text-primary">
-        <i class="fa-solid fa-layer-group w-5 text-primary"></i> Projets
+        <i class="fa-solid fa-layer-group w-5 text-primary"></i> Projets en ligne
       </a>
       <a href="#parcours" class="mobile-nav-link flex items-center gap-3 py-2 text-on-surface font-label text-label-lg hover:text-primary">
         <i class="fa-solid fa-timeline w-5 text-primary"></i> Parcours
@@ -197,12 +197,12 @@
           </div>
 
           <p class="font-body text-body-lg text-on-surface-variant max-w-prose text-pretty">
-            Je conçois des applications web fiables, des applications mobiles performantes et des APIs scalables de bout en bout — avec une expertise forte en <strong class="text-primary font-medium">Django</strong>, <strong class="text-primary font-medium">React / Node.js</strong>, <strong class="text-primary font-medium">React Native &amp; Expo</strong>, en synergie avec les projets <strong class="text-on-surface font-medium">DonaAyem Tech</strong>.
+            Je conçois des plateformes web fiables, des applications mobiles performantes et des APIs scalables — avec une maîtrise avancée de <strong class="text-primary font-medium">Django</strong>, <strong class="text-primary font-medium">React / Node.js</strong>, <strong class="text-primary font-medium">React Native &amp; Expo</strong>, en partenariat avec <strong class="text-on-surface font-medium">DonaAyem Tech</strong>.
           </p>
 
           <div class="flex flex-wrap items-center gap-gutter-md pt-gutter-xs">
             <a href="#projets" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3 rounded bg-primary text-on-primary font-label text-label-lg font-semibold transition-all duration-state-change hover:bg-secondary hover:shadow-[0_0_20px_rgba(0,255,136,0.4)]">
-              <span>Voir les projets</span>
+              <span>Voir mes projets hébergés</span>
               <i class="fa-solid fa-arrow-down text-sm"></i>
             </a>
 
@@ -231,9 +231,9 @@
               <p class="pl-gutter-md text-on-surface">nom: <span class="text-secondary">"Zapfack Foka Joy Rochnel"</span>,</p>
               <p class="pl-gutter-md text-on-surface">role: <span class="text-secondary">"Développeur Full-Stack"</span>,</p>
               <p class="pl-gutter-md text-on-surface">partenaire: <span class="text-secondary">"DonaAyem Tech"</span>,</p>
-              <p class="pl-gutter-md text-on-surface">specialite: [<span class="text-secondary">"Django"</span>, <span class="text-secondary">"React"</span>, <span class="text-secondary">"Node.js"</span>],</p>
-              <p class="pl-gutter-md text-on-surface">mobile: [<span class="text-secondary">"React Native"</span>, <span class="text-secondary">"Expo"</span>],</p>
-              <p class="pl-gutter-md text-on-surface">focus: <span class="text-secondary">"Clean Architecture &amp; Scalability"</span></p>
+              <p class="pl-gutter-md text-on-surface">projetsEnLigne: [<span class="text-secondary">"feeltohome"</span>, <span class="text-secondary">"la-maison-de-la-tele"</span>, <span class="text-secondary">"all-planing"</span>],</p>
+              <p class="pl-gutter-md text-on-surface">stack: [<span class="text-secondary">"Django"</span>, <span class="text-secondary">"React"</span>, <span class="text-secondary">"Expo / RN"</span>, <span class="text-secondary">"Node.js"</span>],</p>
+              <p class="pl-gutter-md text-on-surface">focus: <span class="text-secondary">"Performance, Clean Code &amp; Scale"</span></p>
               <p class="text-on-surface-variant">};</p>
             </div>
           </div>
@@ -244,26 +244,23 @@
     <!-- 2. À PROPOS -->
     <section id="apropos" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20 border-b border-outline-variant">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center">
-        <!-- Visual Avatar Card -->
+        <!-- Visual Avatar Card with animated image -->
         <div class="lg:col-span-5">
-          <div class="rounded-md bg-surface-container border border-outline-variant p-gutter-md flex flex-col items-center justify-center text-center gap-4 py-12 relative overflow-hidden group">
-            <div class="w-32 h-32 rounded-full border-2 border-primary/40 bg-surface-container-high flex items-center justify-center shadow-[0_0_30px_rgba(0,255,136,0.15)] group-hover:border-primary transition-all duration-300">
-              <i class="fa-solid fa-laptop-code text-5xl text-primary"></i>
-            </div>
-            <div class="flex flex-col">
-              <h3 class="font-title text-title-lg text-on-surface font-semibold">Joy Rochnel</h3>
-              <p class="font-label text-label-md text-primary">Développeur Full-Stack · Cameroun</p>
-            </div>
-            <div class="flex items-center gap-3 pt-2">
-              <a href="https://github.com/lapuissancerochi" target="_blank" class="w-10 h-10 rounded-full border border-outline bg-surface-container-low flex items-center justify-center text-on-surface hover:text-primary hover:border-primary transition-colors" aria-label="GitHub">
-                <i class="fa-brands fa-github text-lg"></i>
-              </a>
-              <a href="mailto:lapuissancerochi@gmail.com" class="w-10 h-10 rounded-full border border-outline bg-surface-container-low flex items-center justify-center text-on-surface hover:text-primary hover:border-primary transition-colors" aria-label="Email">
-                <i class="fa-solid fa-envelope text-base"></i>
-              </a>
-              <a href="https://wa.me/237692088248" target="_blank" class="w-10 h-10 rounded-full border border-outline bg-surface-container-low flex items-center justify-center text-on-surface hover:text-primary hover:border-primary transition-colors" aria-label="WhatsApp">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
-              </a>
+          <div class="rounded-md bg-surface-container border border-outline-variant p-gutter-sm relative group overflow-hidden shadow-xl">
+            <div class="relative overflow-hidden rounded">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Zapfack Foka Joy Rochnel - Développeur Full-Stack" class="w-full aspect-square object-cover transition-transform duration-700 ease-out group-hover:scale-105 filter contrast-105 brightness-95" />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+              
+              <!-- Floating info overlay -->
+              <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded bg-surface/90 backdrop-blur-md border border-outline flex items-center justify-between">
+                <div>
+                  <p class="font-label text-label-md text-primary font-semibold">Joy Rochnel</p>
+                  <p class="font-body text-xs text-on-surface-variant">Développeur Full-Stack · Cameroun</p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label text-xs">
+                  <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span> Actif
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -274,16 +271,16 @@
               <i class="fa-solid fa-id-card"></i> À propos
             </span>
             <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance">
-              Transformer des besoins complexes en produits rapides et maintenables.
+              Transformer des besoins complexes en produits rapides, scalables et vivants.
             </h2>
           </div>
 
           <div class="flex flex-col gap-gutter-md max-w-prose">
             <p class="font-body text-body-md text-on-surface-variant text-pretty">
-              Développeur Full-Stack passionné, j'interviens sur l'ensemble du cycle de développement logiciel : conception de backends robustes en <strong class="text-on-surface font-semibold">Django</strong> et <strong class="text-on-surface font-semibold">Node.js</strong>, création d'applications web interactives en <strong class="text-on-surface font-semibold">React &amp; Tailwind CSS</strong>, et développement mobile cross-platform avec <strong class="text-on-surface font-semibold">React Native &amp; Expo</strong>.
+              Ingénieur passionné du web et du mobile, je conçois des systèmes complets : backends modulaires avec <strong class="text-on-surface font-semibold">Django &amp; Django REST Framework</strong>, applications web ultra-réactives en <strong class="text-on-surface font-semibold">Next.js &amp; React</strong>, et applications mobiles natives avec <strong class="text-on-surface font-semibold">React Native &amp; Expo</strong>.
             </p>
             <p class="font-body text-body-md text-on-surface-variant text-pretty">
-              Actuellement en partenariat et stage avec l'entreprise <strong class="text-primary font-semibold">DonaAyem Tech</strong> et ouvert à des opportunités stimulantes (CDI, stages avancés, missions freelance ou projets innovants).
+              Fort d'un partenariat et d'un stage chez <strong class="text-primary font-semibold">DonaAyem Tech</strong> et de plusieurs plateformes déployées avec succès en production, j'apporte une expertise pragmatique orientée résultat pour vos recrutements (CDI / Stage) et vos missions freelance.
             </p>
           </div>
 
@@ -294,21 +291,21 @@
                 <span class="font-headline text-headline-md tabular-nums font-bold">3+ ans</span>
                 <i class="fa-solid fa-clock text-lg opacity-80"></i>
               </div>
-              <span class="font-label text-label-md text-on-surface-variant">Expérience Web &amp; Mobile</span>
+              <span class="font-label text-label-md text-on-surface-variant">Expérience Full-Stack</span>
             </div>
             <div class="p-gutter-md rounded-md bg-surface-container border border-outline-variant flex flex-col gap-gutter-xs">
               <div class="flex items-center justify-between text-primary">
-                <span class="font-headline text-headline-md tabular-nums font-bold">15+</span>
-                <i class="fa-solid fa-diagram-project text-lg opacity-80"></i>
+                <span class="font-headline text-headline-md tabular-nums font-bold">10+</span>
+                <i class="fa-solid fa-rocket text-lg opacity-80"></i>
               </div>
-              <span class="font-label text-label-md text-on-surface-variant">Projets réalisés</span>
+              <span class="font-label text-label-md text-on-surface-variant">Dépôts &amp; Projets livrés</span>
             </div>
             <div class="p-gutter-md rounded-md bg-surface-container border border-outline-variant flex flex-col gap-gutter-xs">
               <div class="flex items-center justify-between text-primary">
                 <span class="font-headline text-headline-md tabular-nums font-bold">100%</span>
                 <i class="fa-solid fa-handshake-angle text-lg opacity-80"></i>
               </div>
-              <span class="font-label text-label-md text-on-surface-variant">Rigueur &amp; Disponibilité</span>
+              <span class="font-label text-label-md text-on-surface-variant">Engagement &amp; Rigueur</span>
             </div>
           </div>
         </div>
@@ -342,7 +339,7 @@
               <div class="h-full bg-primary rounded-full w-[95%]"></div>
             </div>
             <p class="font-body text-body-md text-on-surface-variant">
-              Architecture d'APIs REST ultra-sécurisées, logique métier avancée, ORM Django, authentification JWT, et backends Node.js / Express et Laravel.
+              Architecture d'APIs REST avec Django REST Framework, ORM Django optimisé, authentification JWT/OAuth2, logique métier robuste, et backends Node.js ou Laravel.
             </p>
           </div>
           <div class="flex flex-wrap gap-2">
@@ -375,12 +372,12 @@
               <div class="h-full bg-primary rounded-full w-[92%]"></div>
             </div>
             <p class="font-body text-body-md text-on-surface-variant">
-              Interfaces web modernes et applications mobiles cross-platform iOS &amp; Android fluides avec Expo et Tailwind CSS pour un rendu soigné.
+              Applications mobiles cross-platform iOS &amp; Android ultra-fluides avec React Native &amp; Expo, et applications web dynamiques en Next.js / React avec Tailwind CSS.
             </p>
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
-              <i class="fa-brands fa-react text-primary"></i> React.js
+              <i class="fa-brands fa-react text-primary"></i> React / Next.js
             </span>
             <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
               <i class="fa-solid fa-mobile-screen-button text-primary"></i> React Native
@@ -408,7 +405,7 @@
               <div class="h-full bg-primary rounded-full w-[88%]"></div>
             </div>
             <p class="font-body text-body-md text-on-surface-variant">
-              Modélisation relationnelle rigoureuse, requêtes SQL optimisées, migrations automatisées et intégrité des données d'entreprise.
+              Modélisation relationnelle rigoureuse, requêtes SQL performantes, migrations automatiques et intégrité des données d'entreprise.
             </p>
           </div>
           <div class="flex flex-wrap gap-2">
@@ -419,7 +416,7 @@
               <i class="fa-solid fa-table text-primary"></i> MySQL
             </span>
             <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
-              <i class="fa-solid fa-hard-drive text-primary"></i> SQLite
+              <i class="fa-solid fa-hard-drive text-primary"></i> SQLite / Supabase
             </span>
           </div>
         </article>
@@ -430,7 +427,7 @@
             <header class="flex items-center justify-between gap-gutter-sm">
               <div class="flex items-center gap-gutter-sm">
                 <i class="fa-solid fa-toolbox text-xl text-primary"></i>
-                <h3 class="font-title text-title-lg text-on-surface">Outils &amp; Méthodologies</h3>
+                <h3 class="font-title text-title-lg text-on-surface">Outils, DevOps &amp; Méthodologies</h3>
               </div>
               <span class="font-label text-label-md text-primary tabular-nums font-semibold">90%</span>
             </header>
@@ -438,12 +435,15 @@
               <div class="h-full bg-primary rounded-full w-[90%]"></div>
             </div>
             <p class="font-body text-body-md text-on-surface-variant">
-              Collaboration en équipe via Git/GitHub, respect des méthodes Agiles (Scrum), conteneurisation Docker et documentation claire.
+              Gestion de versions Git &amp; GitHub, méthodologies Agile/Scrum, conteneurisation Docker, déploiements continus Vercel / Render.
             </p>
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
               <i class="fa-brands fa-git-alt text-primary"></i> Git &amp; GitHub
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-cloud-arrow-up text-primary"></i> Vercel / Render
             </span>
             <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
               <i class="fa-solid fa-rotate text-primary"></i> Agile / Scrum
@@ -456,146 +456,258 @@
       </div>
     </section>
 
-    <!-- 4. PROJETS (4 Projets en cards) -->
+    <!-- 4. PROJETS HÉBERGÉS EN LIGNE (Avec vrais liens & images animées) -->
     <section id="projets" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20 border-b border-outline-variant">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter-md mb-12">
         <div class="flex flex-col gap-gutter-sm max-w-2xl">
           <span class="font-label text-label-md text-primary flex items-center gap-2">
-            <i class="fa-solid fa-folder-open"></i> Projets phares
+            <i class="fa-solid fa-globe"></i> Projets hébergés en direct
           </span>
           <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance">
-            Réalisations concrètes &amp; architectures déployées.
+            Mes réalisations hébergées &amp; accessibles en ligne.
           </h2>
+          <p class="font-body text-body-md text-on-surface-variant">
+            Cliquez sur les liens pour tester les applications en production ou consulter le code source sur GitHub.
+          </p>
         </div>
         <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-xs font-label text-label-lg text-primary hover:text-secondary transition-colors">
-          <span>Explorer mon GitHub</span>
+          <span>Tous mes dépôts GitHub</span>
           <i class="fa-brands fa-github text-lg ml-1"></i>
         </a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg items-stretch">
         
-        <!-- Project 1: Django API -->
-        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(0,255,136,0.1)]">
+        <!-- PROJET 1 : FeelToHome (Hébergé sur Vercel) -->
+        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_30px_rgba(0,255,136,0.15)] group">
           <div class="flex flex-col gap-gutter-md">
-            <div class="h-44 rounded bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
-              <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-80"></div>
-              <i class="fa-solid fa-server text-4xl text-primary mb-2 relative z-10 group-hover:scale-110 transition-transform"></i>
-              <span class="font-label text-label-sm text-secondary relative z-10">DJANGO REST FRAMEWORK</span>
-              <p class="font-title text-title-md text-on-surface relative z-10 font-semibold">Plateforme de Gestion &amp; API Métier</p>
+            
+            <!-- Image animée avec overlay & badge live -->
+            <div class="rounded-md overflow-hidden border border-outline-variant bg-surface-container-low relative aspect-video">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="FeelToHome - Plateforme de Réservation de Logements" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 filter contrast-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+              
+              <!-- Live Badge -->
+              <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/90 backdrop-blur-md border border-primary/40 text-primary font-label text-xs font-semibold shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span>HÉBERGÉ EN LIGNE</span>
+              </div>
+
+              <!-- Quick direct buttons overlay -->
+              <div class="absolute bottom-3 right-3 flex items-center gap-2">
+                <a href="https://feeltohome.vercel.app" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary text-on-primary font-label text-xs font-bold shadow-lg hover:bg-secondary transition-colors" title="Tester le site FeelToHome">
+                  <span>Visiter la Démo</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
             
             <header class="flex items-start justify-between gap-gutter-sm">
               <div class="flex flex-col gap-gutter-xs">
-                <span class="font-label text-label-md text-primary">Backend · DonaAyem Tech &amp; Entreprise</span>
-                <h3 class="font-title text-title-lg text-on-surface">GestPro Enterprise API</h3>
+                <span class="font-label text-label-md text-primary font-semibold flex items-center gap-1.5">
+                  <i class="fa-solid fa-house-chimney text-xs"></i> Réservation &amp; PropTech · Next.js 15 &amp; Django 5
+                </span>
+                <h3 class="font-title text-title-lg text-on-surface font-bold">FeelToHome</h3>
               </div>
-              <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" aria-label="Voir le projet sur GitHub" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors">
-                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-              </a>
+              <div class="flex items-center gap-2">
+                <a href="https://github.com/lapuissancerochi/feeltohome" target="_blank" rel="noopener" aria-label="Code source GitHub FeelToHome" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors" title="Code GitHub">
+                  <i class="fa-brands fa-github text-base"></i>
+                </a>
+                <a href="https://feeltohome.vercel.app" target="_blank" rel="noopener" aria-label="Voir FeelToHome en direct" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors" title="Lien en ligne">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+              </div>
             </header>
+            
             <p class="font-body text-body-md text-on-surface-variant text-pretty">
-              Backend haute disponibilité conçu avec Django REST et PostgreSQL. Authentification par token JWT, permissions modulaires par rôles et gestion de transactions métier volumineuses.
+              Plateforme complète de réservation de logements et résidences meublées au Cameroun (« <em>Votre logement, votre sensation de chez vous</em> »). Moteur de recherche avec filtres géographiques avancés, API backend Django REST et interface Next.js 15 haut de gamme.
             </p>
           </div>
-          <footer class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-outline-variant">
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Django</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">DRF</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">PostgreSQL</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Python</span>
+
+          <footer class="flex flex-wrap items-center justify-between gap-gutter-sm pt-gutter-md border-t border-outline-variant">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Next.js 15</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Django 5</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">PostgreSQL</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Tailwind CSS</span>
+            </div>
+            <a href="https://feeltohome.vercel.app" target="_blank" class="font-label text-label-sm text-primary hover:underline flex items-center gap-1 font-semibold">
+              feeltohome.vercel.app <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
           </footer>
         </article>
 
-        <!-- Project 2: Mobile React Native & Expo -->
-        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(0,255,136,0.1)]">
+        <!-- PROJET 2 : La Maison de la Télé (Hébergé sur Vercel) -->
+        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_30px_rgba(0,255,136,0.15)] group">
           <div class="flex flex-col gap-gutter-md">
-            <div class="h-44 rounded bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
-              <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-80"></div>
-              <i class="fa-solid fa-mobile-screen text-4xl text-primary mb-2 relative z-10 group-hover:scale-110 transition-transform"></i>
-              <span class="font-label text-label-sm text-secondary relative z-10">EXPO &amp; REACT NATIVE</span>
-              <p class="font-title text-title-md text-on-surface relative z-10 font-semibold">Application Mobile Cross-Platform</p>
+            
+            <!-- Image animée avec overlay & badge live -->
+            <div class="rounded-md overflow-hidden border border-outline-variant bg-surface-container-low relative aspect-video">
+              <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1200&q=80" alt="La Maison de la Télé - E-Commerce Vitrine" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 filter contrast-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+              
+              <!-- Live Badge -->
+              <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/90 backdrop-blur-md border border-primary/40 text-primary font-label text-xs font-semibold shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span>HÉBERGÉ EN LIGNE</span>
+              </div>
+
+              <!-- Quick direct buttons overlay -->
+              <div class="absolute bottom-3 right-3 flex items-center gap-2">
+                <a href="https://la-maison-de-la-tele.vercel.app" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary text-on-primary font-label text-xs font-bold shadow-lg hover:bg-secondary transition-colors" title="Tester La Maison de la Télé">
+                  <span>Visiter la Démo</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
 
             <header class="flex items-start justify-between gap-gutter-sm">
               <div class="flex flex-col gap-gutter-xs">
-                <span class="font-label text-label-md text-primary">Mobile · iOS &amp; Android</span>
-                <h3 class="font-title text-title-lg text-on-surface">MarketCam Mobile</h3>
+                <span class="font-label text-label-md text-primary font-semibold flex items-center gap-1.5">
+                  <i class="fa-solid fa-tv text-xs"></i> E-Commerce · Commande WhatsApp Directe
+                </span>
+                <h3 class="font-title text-title-lg text-on-surface font-bold">La Maison de la Télé</h3>
               </div>
-              <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" aria-label="Voir le projet sur GitHub" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors">
-                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-              </a>
+              <div class="flex items-center gap-2">
+                <a href="https://github.com/lapuissancerochi/la_maison_de_la_tele" target="_blank" rel="noopener" aria-label="Code source GitHub La Maison de la Télé" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors" title="Code GitHub">
+                  <i class="fa-brands fa-github text-base"></i>
+                </a>
+                <a href="https://la-maison-de-la-tele.vercel.app" target="_blank" rel="noopener" aria-label="Voir La Maison de la Télé en direct" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors" title="Lien en ligne">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+              </div>
             </header>
+            
             <p class="font-body text-body-md text-on-surface-variant text-pretty">
-              Application mobile performante développée avec React Native et Expo. Navigation fluide, gestion du cache offline, notifications push et consommation d'APIs REST en temps réel.
+              Plateforme e-commerce vitrine moderne et fluide conçue pour la vente d'écrans et téléviseurs haute définition. Catalogue interactif avec filtres dynamiques et tunnel d'achat instantané via intégration de l'API WhatsApp.
             </p>
           </div>
-          <footer class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-outline-variant">
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">React Native</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Expo</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">JavaScript</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">REST</span>
+
+          <footer class="flex flex-wrap items-center justify-between gap-gutter-sm pt-gutter-md border-t border-outline-variant">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">JavaScript</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">React</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Tailwind CSS</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">WhatsApp API</span>
+            </div>
+            <a href="https://la-maison-de-la-tele.vercel.app" target="_blank" class="font-label text-label-sm text-primary hover:underline flex items-center gap-1 font-semibold">
+              la-maison-de-la-tele.vercel.app <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
           </footer>
         </article>
 
-        <!-- Project 3: Full-Stack React + Node.js -->
-        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(0,255,136,0.1)]">
+        <!-- PROJET 3 : All_Planing (Hébergé sur Vercel) -->
+        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_30px_rgba(0,255,136,0.15)] group">
           <div class="flex flex-col gap-gutter-md">
-            <div class="h-44 rounded bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
-              <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-80"></div>
-              <i class="fa-solid fa-chart-line text-4xl text-primary mb-2 relative z-10 group-hover:scale-110 transition-transform"></i>
-              <span class="font-label text-label-sm text-secondary relative z-10">REACT &amp; NODE.JS</span>
-              <p class="font-title text-title-md text-on-surface relative z-10 font-semibold">Tableau de Bord Analytique</p>
+            
+            <!-- Image animée avec overlay & badge live -->
+            <div class="rounded-md overflow-hidden border border-outline-variant bg-surface-container-low relative aspect-video">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" alt="All_Planing - Application de Planification & Organisation" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 filter contrast-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+              
+              <!-- Live Badge -->
+              <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/90 backdrop-blur-md border border-primary/40 text-primary font-label text-xs font-semibold shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span>HÉBERGÉ EN LIGNE</span>
+              </div>
+
+              <!-- Quick direct buttons overlay -->
+              <div class="absolute bottom-3 right-3 flex items-center gap-2">
+                <a href="https://all-planing.vercel.app" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary text-on-primary font-label text-xs font-bold shadow-lg hover:bg-secondary transition-colors" title="Tester All_Planing">
+                  <span>Visiter la Démo</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
 
             <header class="flex items-start justify-between gap-gutter-sm">
               <div class="flex flex-col gap-gutter-xs">
-                <span class="font-label text-label-md text-primary">Web App · React &amp; Node</span>
-                <h3 class="font-title text-title-lg text-on-surface">AnalytiX Dashboard</h3>
+                <span class="font-label text-label-md text-primary font-semibold flex items-center gap-1.5">
+                  <i class="fa-solid fa-calendar-check text-xs"></i> Productivité &amp; Tâches · React Native &amp; Expo 57
+                </span>
+                <h3 class="font-title text-title-lg text-on-surface font-bold">All_Planing</h3>
               </div>
-              <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" aria-label="Voir le projet sur GitHub" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors">
-                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-              </a>
+              <div class="flex items-center gap-2">
+                <a href="https://github.com/lapuissancerochi/All_Planing" target="_blank" rel="noopener" aria-label="Code source GitHub All_Planing" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors" title="Code GitHub">
+                  <i class="fa-brands fa-github text-base"></i>
+                </a>
+                <a href="https://all-planing.vercel.app" target="_blank" rel="noopener" aria-label="Voir All_Planing en direct" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors" title="Lien en ligne">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+              </div>
             </header>
+            
             <p class="font-body text-body-md text-on-surface-variant text-pretty">
-              Dashboard interactif pour visualiser des données en direct. Composants React personnalisés, stylisation Tailwind CSS soignée, et API Node.js/Express connectée à une base relationnelle.
+              Application de planification intelligente et gestion de tâches quotidiennes. Calendrier interactif, gestion multi-langue (i18n), stockage d'état réactif avec Zustand, et support web &amp; mobile cross-platform.
             </p>
           </div>
-          <footer class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-outline-variant">
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">React</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Node.js</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Tailwind</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">MySQL</span>
+
+          <footer class="flex flex-wrap items-center justify-between gap-gutter-sm pt-gutter-md border-t border-outline-variant">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">TypeScript</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Expo 57</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">React Native</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Zustand</span>
+            </div>
+            <a href="https://all-planing.vercel.app" target="_blank" class="font-label text-label-sm text-primary hover:underline flex items-center gap-1 font-semibold">
+              all-planing.vercel.app <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
           </footer>
         </article>
 
-        <!-- Project 4: Laravel & Tailwind -->
-        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(0,255,136,0.1)]">
+        <!-- PROJET 4 : Lotus Mobile (Expo & Supabase) -->
+        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_30px_rgba(0,255,136,0.15)] group">
           <div class="flex flex-col gap-gutter-md">
-            <div class="h-44 rounded bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
-              <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-80"></div>
-              <i class="fa-brands fa-laravel text-4xl text-primary mb-2 relative z-10 group-hover:scale-110 transition-transform"></i>
-              <span class="font-label text-label-sm text-secondary relative z-10">LARAVEL &amp; TAILWIND</span>
-              <p class="font-title text-title-md text-on-surface relative z-10 font-semibold">Portail Web &amp; Gestion de Services</p>
+            
+            <!-- Image animée avec overlay & badge live -->
+            <div class="rounded-md overflow-hidden border border-outline-variant bg-surface-container-low relative aspect-video">
+              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80" alt="Lotus Mobile - Application Mobile Expo & Supabase" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 filter contrast-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+              
+              <!-- Mobile App Badge -->
+              <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/90 backdrop-blur-md border border-primary/40 text-primary font-label text-xs font-semibold shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span>APPLICATION MOBILE</span>
+              </div>
+
+              <!-- Quick direct buttons overlay -->
+              <div class="absolute bottom-3 right-3 flex items-center gap-2">
+                <a href="https://github.com/lapuissancerochi/lotus" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-high/90 border border-outline text-on-surface font-label text-xs font-bold shadow-lg hover:border-primary hover:text-primary transition-colors" title="Code source Lotus">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Code source</span>
+                </a>
+              </div>
             </div>
 
             <header class="flex items-start justify-between gap-gutter-sm">
               <div class="flex flex-col gap-gutter-xs">
-                <span class="font-label text-label-md text-primary">Web Full-Stack · Laravel</span>
-                <h3 class="font-title text-title-lg text-on-surface">ClinicFlow Platform</h3>
+                <span class="font-label text-label-md text-primary font-semibold flex items-center gap-1.5">
+                  <i class="fa-solid fa-mobile-screen text-xs"></i> App Mobile · React Native &amp; Supabase
+                </span>
+                <h3 class="font-title text-title-lg text-on-surface font-bold">Lotus Mobile App</h3>
               </div>
-              <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" aria-label="Voir le projet sur GitHub" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors">
-                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-              </a>
+              <div class="flex items-center gap-2">
+                <a href="https://github.com/lapuissancerochi/lotus" target="_blank" rel="noopener" aria-label="Code source GitHub Lotus" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors" title="Code GitHub">
+                  <i class="fa-brands fa-github text-base"></i>
+                </a>
+              </div>
             </header>
+            
             <p class="font-body text-body-md text-on-surface-variant text-pretty">
-              Application web de gestion avec prise de rendez-vous en ligne, validation automatisée, messagerie interne et panel d'administration complet propulsé par Laravel.
+              Application mobile moderne et sécurisée construite avec React Native et Expo Router. Authentification multi-facteurs, base de données Supabase temps réel, gestion d'état centralisée et UI fluide.
             </p>
           </div>
-          <footer class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-outline-variant">
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Laravel</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">PHP</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Tailwind CSS</span>
-            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">SQLite</span>
+
+          <footer class="flex flex-wrap items-center justify-between gap-gutter-sm pt-gutter-md border-t border-outline-variant">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">React Native</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Expo Router</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Supabase</span>
+              <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Zustand</span>
+            </div>
+            <a href="https://github.com/lapuissancerochi/lotus" target="_blank" class="font-label text-label-sm text-primary hover:underline flex items-center gap-1 font-semibold">
+              github.com/lotus <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
           </footer>
         </article>
 
@@ -621,14 +733,14 @@
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter-xs mb-gutter-sm">
             <div>
               <h3 class="font-title text-title-lg text-on-surface font-semibold flex items-center gap-2">
-                <i class="fa-solid fa-briefcase text-primary text-base"></i> Développeur Full-Stack &amp; Stagiaire Partenaire
+                <i class="fa-solid fa-briefcase text-primary text-base"></i> Développeur Full-Stack &amp; Partenaire Technique
               </h3>
               <p class="font-label text-label-lg text-primary font-medium">DonaAyem Tech</p>
             </div>
             <span class="font-label text-label-md text-on-surface-variant tabular-nums">2024 — Présent</span>
           </div>
           <p class="font-body text-body-md text-on-surface-variant max-w-prose">
-            Participation active au développement de solutions numériques, conception d'APIs Django et d'applications front-end, intégration continue et collaboration technique sur des projets à forte valeur ajoutée.
+            Conception et déploiement de solutions numériques d'envergure, APIs Django REST sécurisées, intégration frontend Next.js / React et collaboration sur des produits à forte valeur ajoutée.
           </p>
         </div>
 
@@ -638,14 +750,14 @@
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter-xs mb-gutter-sm">
             <div>
               <h3 class="font-title text-title-lg text-on-surface font-semibold flex items-center gap-2">
-                <i class="fa-solid fa-laptop-code text-secondary text-base"></i> Développeur Full-Stack Freelance
+                <i class="fa-solid fa-laptop-code text-secondary text-base"></i> Développeur Full-Stack Indépendant
               </h3>
-              <p class="font-label text-label-lg text-secondary">Projets Clients &amp; Partenaires</p>
+              <p class="font-label text-label-lg text-secondary">Projets en Production &amp; Clients</p>
             </div>
             <span class="font-label text-label-md text-on-surface-variant tabular-nums">2023 — 2024</span>
           </div>
           <p class="font-body text-body-md text-on-surface-variant max-w-prose">
-            Conception et livraison de plateformes web complètes, applications mobiles réactives et dashboards sur-mesure pour indépendants et entreprises locales.
+            Déploiement de plateformes e-commerce (La Maison de la Télé), d'applications de productivité (All_Planing) et d'applications mobiles (Lotus), avec hébergement sur Vercel et maintenance continue.
           </p>
         </div>
 
@@ -655,14 +767,14 @@
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter-xs mb-gutter-sm">
             <div>
               <h3 class="font-title text-title-lg text-on-surface font-semibold flex items-center gap-2">
-                <i class="fa-solid fa-graduation-cap text-secondary text-base"></i> Formation &amp; Approfondissement Technique
+                <i class="fa-solid fa-graduation-cap text-secondary text-base"></i> Formation &amp; Perfectionnement Logiciel
               </h3>
               <p class="font-label text-label-lg text-secondary">Architecture Logicielle &amp; Écosystème Web/Mobile</p>
             </div>
             <span class="font-label text-label-md text-on-surface-variant tabular-nums">2021 — 2023</span>
           </div>
           <p class="font-body text-body-md text-on-surface-variant max-w-prose">
-            Maîtrise approfondie des langages Python, JavaScript, TypeScript, PHP, structuration de bases de données relationnelles et pratiques de clean code.
+            Maîtrise approfondie des langages Python, JavaScript, TypeScript, structuration de bases de données relationnelles SQL et bonnes pratiques de clean code.
           </p>
         </div>
       </div>
