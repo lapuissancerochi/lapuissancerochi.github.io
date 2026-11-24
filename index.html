@@ -1,1724 +1,855 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio de Zapfack Foka Joy Rochnel – Développeur Full-Stack spécialisé en Django, React, React Native et Node.js, basé au Cameroun." />
-  <meta name="author" content="Zapfack Foka Joy Rochnel" />
-  <title>Joy Rochnel · Développeur Full-Stack</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zapfack Foka Joy Rochnel — Développeur Full-Stack</title>
+  <meta name="description" content="Portfolio de Zapfack Foka Joy Rochnel – Développeur Full-Stack spécialisé Django, React, React Native, Expo et Node.js. Partenaire DonaAyem Tech." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Font Awesome 6.5.1 CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- AOS – Animate on Scroll -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- Google Fonts: Geist, Geist Mono, Metrophobic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&family=Metrophobic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
 
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#00FF88',
+            'on-primary': '#00210C',
+            'primary-container': '#003919',
+            'on-primary-container': '#60FF99',
+            'secondary': '#7EDA96',
+            'on-secondary': '#00210C',
+            'surface': '#0A0A0A',
+            'surface-container-low': '#111312',
+            'surface-container': '#161918',
+            'surface-container-high': '#1E2220',
+            'on-surface': '#E8F0EB',
+            'on-surface-variant': '#9CA8A0',
+            'outline': '#2E3531',
+            'outline-variant': '#232926',
+            'error': '#FFB4AB',
+            'on-error': '#690005',
+            'success': '#00FF88',
+            'on-success': '#00210C',
+          },
+          borderRadius: {
+            'sm': '4px',
+            'DEFAULT': '6px',
+            'md': '12px',
+            'lg': '16px',
+            'full': '9999px',
+          },
+          spacing: {
+            'gutter-xs': '4px',
+            'gutter-sm': '8px',
+            'gutter-md': '16px',
+            'gutter-lg': '24px',
+            'gutter-xl': '32px',
+            'section': '80px',
+            'page-margin': '24px',
+          },
+          fontFamily: {
+            'display': ['"Metrophobic"', 'sans-serif'],
+            'headline': ['"Metrophobic"', 'sans-serif'],
+            'title': ['"Geist"', 'sans-serif'],
+            'body': ['"Geist"', 'sans-serif'],
+            'label': ['"Geist Mono"', 'monospace'],
+          },
+          fontSize: {
+            'display-lg': ['56px', { lineHeight: '62px', letterSpacing: '-1px', fontWeight: '700' }],
+            'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+            'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.5px', fontWeight: '700' }],
+            'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '-0.25px', fontWeight: '700' }],
+            'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '-0.25px', fontWeight: '600' }],
+            'title-lg': ['20px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '600' }],
+            'title-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '600' }],
+            'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+            'body-md': ['15px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+            'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.25px', fontWeight: '500' }],
+            'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.5px', fontWeight: '500' }],
+            'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.5px', fontWeight: '500' }],
+          },
+          transitionDuration: {
+            'state-change': '150ms',
+            'surface-enter': '240ms',
+          },
+          transitionTimingFunction: {
+            'state-change': 'ease-out',
+            'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+          },
+        },
+      },
+    };
+  </script>
   <style>
-    /* =====================================================
-       CSS RESET & CUSTOM PROPERTIES
-    ===================================================== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg-primary:   #0f172a;
-      --bg-secondary: #1e293b;
-      --bg-card:      #1e293b;
-      --accent-1:     #7c3aed;
-      --accent-2:     #6366f1;
-      --accent-gradient: linear-gradient(135deg, #7c3aed, #6366f1, #0ea5e9);
-      --text-primary: #f1f5f9;
-      --text-secondary: #94a3b8;
-      --text-muted:   #64748b;
-      --border:       rgba(99,102,241,0.2);
-      --shadow:       0 25px 50px -12px rgba(0,0,0,0.6);
-      --radius-sm:    8px;
-      --radius-md:    16px;
-      --radius-lg:    24px;
-      --transition:   0.3s ease;
-      --font-primary: 'Inter', sans-serif;
-      --font-display: 'Poppins', sans-serif;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      font-family: var(--font-primary);
-      font-size: 16px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    a { color: inherit; text-decoration: none; transition: var(--transition); }
-    img { max-width: 100%; display: block; }
-    ul { list-style: none; }
-
-    /* =====================================================
-       SCROLLBAR
-    ===================================================== */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--bg-primary); }
-    ::-webkit-scrollbar-thumb { background: var(--accent-1); border-radius: 3px; }
-
-    /* =====================================================
-       UTILITY CLASSES
-    ===================================================== */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .section { padding: 100px 0; }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    .section-subtitle {
-      color: var(--text-secondary);
-      font-size: 1rem;
-      margin-bottom: 60px;
-      max-width: 520px;
-    }
-    .gradient-text {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 14px;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      border: 1px solid var(--border);
-      background: rgba(99,102,241,0.08);
-      color: var(--accent-2);
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 28px;
-      border-radius: var(--radius-sm);
-      font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      border: none;
-      transition: var(--transition);
-      white-space: nowrap;
-    }
-    .btn-primary {
-      background: var(--accent-gradient);
-      color: #fff;
-      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(124,58,237,0.5);
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--text-primary);
-      border: 1.5px solid rgba(99,102,241,0.5);
-    }
-    .btn-outline:hover {
-      background: rgba(99,102,241,0.1);
-      border-color: var(--accent-2);
-      transform: translateY(-2px);
-    }
-    .divider {
-      width: 60px;
-      height: 4px;
-      background: var(--accent-gradient);
-      border-radius: 2px;
-      margin-bottom: 20px;
-    }
-
-    /* =====================================================
-       NAVBAR
-    ===================================================== */
-    #navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 18px 0;
-      transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
-    }
-    #navbar.scrolled {
-      background: rgba(15,23,42,0.92);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 1px 0 rgba(99,102,241,0.15);
-      padding: 12px 0;
-    }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-weight: 700;
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 36px;
-    }
-    .nav-links a {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      font-weight: 500;
-      position: relative;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent-gradient);
-      border-radius: 1px;
-      transition: width var(--transition);
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
-    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-
-    .nav-cta { margin-left: 12px; padding: 8px 20px; font-size: 0.85rem; }
-
-    /* Hamburger */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 4px;
-      background: none;
-      border: none;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text-primary);
-      border-radius: 2px;
-      transition: var(--transition);
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    /* Mobile menu */
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      background: rgba(15,23,42,0.97);
-      backdrop-filter: blur(20px);
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      padding: 20px 24px 32px;
-      border-top: 1px solid var(--border);
-      gap: 4px;
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      padding: 12px 0;
-      color: var(--text-secondary);
-      font-size: 1rem;
-      font-weight: 500;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .mobile-menu a:hover { color: var(--text-primary); padding-left: 8px; }
-    .mobile-menu .btn { margin-top: 16px; width: fit-content; }
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding-top: 80px;
-    }
-
-    /* Animated gradient background */
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 10%, rgba(124,58,237,0.18) 0%, transparent 60%),
-                  radial-gradient(ellipse 50% 40% at 80% 80%, rgba(99,102,241,0.12) 0%, transparent 50%);
-    }
-
-    /* Particle canvas */
-    #particles-canvas {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
-
-    /* Grid overlay */
-    .hero-grid {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 60px;
-      align-items: center;
-      width: 100%;
-    }
-
-    .hero-badge {
-      margin-bottom: 24px;
-      animation: fadeInDown 0.8s ease both;
-    }
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      animation: fadeInUp 0.8s 0.2s ease both;
-    }
-    .hero-subtitle {
-      font-size: clamp(1rem, 2.5vw, 1.3rem);
-      color: var(--text-secondary);
-      margin-bottom: 32px;
-      max-width: 520px;
-      animation: fadeInUp 0.8s 0.4s ease both;
-    }
-    .hero-buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      animation: fadeInUp 0.8s 0.6s ease both;
-    }
-
-    /* Typewriter cursor */
-    .typewriter { display: inline; }
-    .cursor {
-      display: inline-block;
-      width: 3px;
-      background: var(--accent-1);
-      animation: blink 1s infinite;
-      margin-left: 2px;
-      border-radius: 1px;
-    }
-    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
-
-    /* Hero avatar / visual */
-    .hero-visual {
-      flex-shrink: 0;
-      animation: fadeInRight 0.8s 0.4s ease both;
-    }
-    .hero-avatar {
-      width: 280px;
-      height: 280px;
-      border-radius: var(--radius-lg);
-      background: var(--bg-secondary);
-      border: 2px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 7rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-avatar::before {
-      content: '';
-      position: absolute;
-      inset: -40%;
-      background: conic-gradient(from 0deg, transparent 0%, #7c3aed 10%, transparent 20%);
-      animation: spin 4s linear infinite;
-    }
-    .hero-avatar::after {
-      content: '';
-      position: absolute;
-      inset: 3px;
-      background: var(--bg-secondary);
-      border-radius: calc(var(--radius-lg) - 3px);
-    }
-    .avatar-inner {
-      position: relative;
-      z-index: 1;
-      font-size: 5rem;
-      line-height: 1;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* Hero scroll indicator */
-    .scroll-indicator {
-      position: absolute;
-      bottom: 36px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      animation: fadeIn 1s 1.5s ease both;
-    }
-    .scroll-dot {
-      width: 20px;
-      height: 32px;
-      border: 2px solid var(--text-muted);
-      border-radius: 10px;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding-top: 5px;
-    }
-    .scroll-dot::after {
-      content: '';
-      width: 4px;
-      height: 8px;
-      background: var(--accent-1);
-      border-radius: 2px;
-      animation: scrollDot 2s infinite;
-    }
-    @keyframes scrollDot {
-      0% { transform: translateY(0); opacity: 1; }
-      80% { transform: translateY(10px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 0; }
-    }
-
-    /* =====================================================
-       ABOUT
-    ===================================================== */
-    #about { background: var(--bg-secondary); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-    .about-text p {
-      color: var(--text-secondary);
-      margin-bottom: 20px;
-      font-size: 1rem;
-    }
-    .about-text p strong { color: var(--text-primary); }
-    .about-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 36px;
-    }
-    .stat-card {
-      background: var(--bg-primary);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      text-align: center;
-      transition: var(--transition);
-    }
-    .stat-card:hover {
-      border-color: var(--accent-1);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(124,58,237,0.15);
-    }
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 800;
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .stat-label { color: var(--text-secondary); font-size: 0.85rem; margin-top: 4px; }
-
-    .about-info { display: flex; flex-direction: column; gap: 16px; }
-    .info-card {
-      background: var(--bg-primary);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 20px 24px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      transition: var(--transition);
-    }
-    .info-card:hover { border-color: var(--accent-1); }
-    .info-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-sm);
-      background: rgba(124,58,237,0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      color: var(--accent-2);
-      flex-shrink: 0;
-    }
-    .info-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
-    .info-value { font-size: 0.95rem; color: var(--text-primary); font-weight: 500; margin-top: 2px; }
-    .info-value a { color: var(--accent-2); }
-    .info-value a:hover { color: var(--accent-1); }
-
-    /* =====================================================
-       SKILLS
-    ===================================================== */
-    #skills { background: var(--bg-primary); }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-    .skill-category h3 {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--accent-2);
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .skill-category h3 i { font-size: 0.9rem; }
-
-    /* Skill bars */
-    .skill-bar { margin-bottom: 18px; }
-    .skill-bar-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
-    .skill-name { font-size: 0.9rem; font-weight: 500; }
-    .skill-pct { font-size: 0.8rem; color: var(--text-muted); }
-    .skill-track {
-      height: 6px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-    .skill-fill {
-      height: 100%;
-      border-radius: 3px;
-      background: var(--accent-gradient);
-      width: 0;
-      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Tech badges */
-    .badges-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .tech-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 14px;
-      background: rgba(30,41,59,0.8);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-    .tech-badge:hover {
-      border-color: var(--accent-2);
-      background: rgba(99,102,241,0.1);
-      transform: translateY(-2px);
-    }
-    .tech-badge i { color: var(--accent-2); font-size: 0.9rem; }
-
-    /* =====================================================
-       PROJECTS
-    ===================================================== */
-    #projects { background: var(--bg-secondary); }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
-      gap: 28px;
-    }
-    .project-card {
-      background: var(--bg-primary);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      transition: var(--transition);
-      display: flex;
-      flex-direction: column;
-    }
-    .project-card:hover {
-      border-color: rgba(124,58,237,0.5);
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    }
-    .project-banner {
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .project-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: inherit;
-      filter: blur(0px);
-    }
-    .banner-1 { background: linear-gradient(135deg, #1a0a3a 0%, #2d1467 100%); }
-    .banner-2 { background: linear-gradient(135deg, #0a1a3a 0%, #0d3b7a 100%); }
-    .banner-3 { background: linear-gradient(135deg, #0a2a1a 0%, #0d6b3a 100%); }
-    .banner-4 { background: linear-gradient(135deg, #2a1a0a 0%, #7a4b0d 100%); }
-    .project-emoji {
-      position: relative;
-      z-index: 1;
-      filter: drop-shadow(0 4px 20px rgba(0,0,0,0.5));
-    }
-    .project-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
-    .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-    .project-tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .tag-purple { background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.3); }
-    .tag-blue   { background: rgba(14,165,233,0.12); color: #38bdf8; border: 1px solid rgba(14,165,233,0.25); }
-    .tag-green  { background: rgba(16,185,129,0.12); color: #34d399; border: 1px solid rgba(16,185,129,0.25); }
-    .tag-orange { background: rgba(245,158,11,0.12); color: #fbbf24; border: 1px solid rgba(245,158,11,0.25); }
-
-    .project-title {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .project-desc {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      flex: 1;
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-    .project-links { display: flex; gap: 12px; }
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 8px 18px;
-      border-radius: var(--radius-sm);
-      transition: var(--transition);
-    }
-    .link-github {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--text-secondary);
-    }
-    .link-github:hover { background: rgba(255,255,255,0.1); color: var(--text-primary); border-color: rgba(255,255,255,0.2); }
-    .link-demo {
-      background: rgba(99,102,241,0.15);
-      border: 1px solid rgba(99,102,241,0.3);
-      color: var(--accent-2);
-    }
-    .link-demo:hover { background: rgba(99,102,241,0.25); border-color: var(--accent-2); }
-
-    /* =====================================================
-       TIMELINE / EXPERIENCE
-    ===================================================== */
-    #experience { background: var(--bg-primary); }
-    .timeline {
-      position: relative;
-      padding-left: 40px;
-      max-width: 760px;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 15px;
-      top: 8px;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--accent-1), transparent);
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 48px;
-    }
-    .timeline-item:last-child { margin-bottom: 0; }
-    .timeline-dot {
-      position: absolute;
-      left: -32px;
-      top: 6px;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--accent-gradient);
-      border: 3px solid var(--bg-primary);
-      box-shadow: 0 0 0 3px rgba(124,58,237,0.3);
-    }
-    .timeline-date {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--accent-2);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 8px;
-    }
-    .timeline-card {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 24px 28px;
-      transition: var(--transition);
-    }
-    .timeline-card:hover {
-      border-color: rgba(124,58,237,0.4);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-    }
-    .timeline-role {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .timeline-company {
-      color: var(--accent-2);
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .timeline-desc {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-    .timeline-desc li {
-      padding: 4px 0;
-      padding-left: 16px;
-      position: relative;
-    }
-    .timeline-desc li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--accent-1);
-      font-size: 0.8rem;
-    }
-
-    /* =====================================================
-       CONTACT
-    ===================================================== */
-    #contact { background: var(--bg-secondary); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-    }
-    .contact-info h3 {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-    .contact-info p { color: var(--text-secondary); margin-bottom: 32px; line-height: 1.8; }
-    .contact-links { display: flex; flex-direction: column; gap: 16px; }
-    .contact-link-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 18px 20px;
-      background: var(--bg-primary);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      transition: var(--transition);
-    }
-    .contact-link-item:hover {
-      border-color: var(--accent-1);
-      transform: translateX(6px);
-    }
-    .contact-link-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-sm);
-      background: rgba(124,58,237,0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-2);
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-    .contact-link-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
-    .contact-link-value { color: var(--text-primary); font-weight: 500; font-size: 0.95rem; }
-
-    /* Contact right – CTA block */
-    .contact-cta-block {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .cta-card {
-      background: var(--bg-primary);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-    }
-    .cta-card h4 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .cta-card p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; }
-    .social-row { display: flex; gap: 12px; margin-top: 32px; }
-    .social-btn {
-      width: 46px;
-      height: 46px;
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--text-secondary);
-      font-size: 1.1rem;
-      transition: var(--transition);
-    }
-    .social-btn:hover {
-      background: rgba(99,102,241,0.15);
-      border-color: var(--accent-2);
-      color: var(--accent-2);
-      transform: translateY(-3px);
-    }
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-    footer {
-      background: var(--bg-primary);
-      border-top: 1px solid var(--border);
-      padding: 32px 0;
-    }
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .footer-logo { font-family: var(--font-display); font-weight: 700; font-size: 1rem; }
-    .footer-copy { color: var(--text-muted); font-size: 0.85rem; }
-    .footer-copy span { color: var(--accent-2); }
-
-    /* =====================================================
-       KEYFRAME ANIMATIONS
-    ===================================================== */
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
-
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
-    @media (max-width: 1024px) {
-      .hero-content { grid-template-columns: 1fr; }
-      .hero-visual { display: none; }
-      .about-grid { grid-template-columns: 1fr; }
-      .projects-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 768px) {
-      .section { padding: 72px 0; }
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .about-stats { grid-template-columns: 1fr 1fr; }
-      .hero-title { font-size: 2rem; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-buttons { flex-direction: column; }
-      .about-stats { grid-template-columns: 1fr; }
-      .footer-inner { flex-direction: column; text-align: center; }
-    }
+    .material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    ::selection { background-color: #00FF88; color: #00210C; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0A0A0A; }
+    ::-webkit-scrollbar-thumb { background: #2E3531; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #00FF88; }
   </style>
 </head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col">
 
-<body>
+  <!-- Navigation Sticky -->
+  <header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant">
+    <div class="max-w-6xl mx-auto px-gutter-md md:px-page-margin h-16 flex items-center justify-between gap-gutter-md">
+      <a href="#hero" class="inline-flex items-center gap-gutter-sm font-label text-label-lg text-on-surface hover:text-primary transition-colors duration-state-change">
+        <span class="w-2.5 h-2.5 rounded-sm bg-primary shadow-[0_0_10px_#00FF88]" aria-hidden="true"></span>
+        <span>joy.rochnel</span>
+      </a>
 
-  <!-- ===================================================
-       NAVBAR
-  =================================================== -->
-  <nav id="navbar">
-    <div class="container">
-      <div class="nav-inner">
-        <a href="#hero" class="nav-logo">&lt;JoyRochnel /&gt;</a>
+      <!-- Desktop Nav -->
+      <nav aria-label="Navigation principale" class="hidden md:flex items-center gap-gutter-lg">
+        <a href="#apropos" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change flex items-center gap-1.5">
+          <i class="fa-solid fa-user text-xs text-primary/70"></i> À propos
+        </a>
+        <a href="#competences" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change flex items-center gap-1.5">
+          <i class="fa-solid fa-code text-xs text-primary/70"></i> Compétences
+        </a>
+        <a href="#projets" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change flex items-center gap-1.5">
+          <i class="fa-solid fa-layer-group text-xs text-primary/70"></i> Projets
+        </a>
+        <a href="#parcours" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change flex items-center gap-1.5">
+          <i class="fa-solid fa-timeline text-xs text-primary/70"></i> Parcours
+        </a>
+        <a href="#contact" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change flex items-center gap-1.5">
+          <i class="fa-solid fa-envelope text-xs text-primary/70"></i> Contact
+        </a>
+      </nav>
 
-        <ul class="nav-links">
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#experience">Parcours</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <a href="#" class="btn btn-primary nav-cta">
-          <i class="fa-solid fa-download"></i> CV
+      <!-- Right Actions -->
+      <div class="flex items-center gap-gutter-sm">
+        <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center w-9 h-9 rounded border border-outline bg-surface-container text-on-surface hover:text-primary hover:border-primary transition-colors" title="Profil GitHub">
+          <i class="fa-brands fa-github text-base"></i>
+        </a>
+        <a href="#contact" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-md py-2 rounded border border-outline bg-surface-container text-on-surface font-label text-label-md transition-colors duration-state-change hover:border-primary hover:text-primary focus-visible:ring-2 focus-visible:ring-primary">
+          <i class="fa-solid fa-paper-plane text-xs text-primary"></i>
+          <span>Me contacter</span>
         </a>
 
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded border border-outline bg-surface-container text-on-surface hover:text-primary focus:outline-none" aria-label="Menu de navigation">
+          <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
         </button>
       </div>
+    </div>
 
-      <!-- Mobile menu -->
-      <div class="mobile-menu" id="mobile-menu">
-        <a href="#about">À propos</a>
-        <a href="#skills">Compétences</a>
-        <a href="#projects">Projets</a>
-        <a href="#experience">Parcours</a>
-        <a href="#contact">Contact</a>
-        <a href="#" class="btn btn-primary"><i class="fa-solid fa-download"></i> Télécharger le CV</a>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-outline-variant bg-surface-container px-gutter-md py-4 flex flex-col gap-3">
+      <a href="#apropos" class="mobile-nav-link flex items-center gap-3 py-2 text-on-surface font-label text-label-lg hover:text-primary">
+        <i class="fa-solid fa-user w-5 text-primary"></i> À propos
+      </a>
+      <a href="#competences" class="mobile-nav-link flex items-center gap-3 py-2 text-on-surface font-label text-label-lg hover:text-primary">
+        <i class="fa-solid fa-code w-5 text-primary"></i> Compétences
+      </a>
+      <a href="#projets" class="mobile-nav-link flex items-center gap-3 py-2 text-on-surface font-label text-label-lg hover:text-primary">
+        <i class="fa-solid fa-layer-group w-5 text-primary"></i> Projets
+      </a>
+      <a href="#parcours" class="mobile-nav-link flex items-center gap-3 py-2 text-on-surface font-label text-label-lg hover:text-primary">
+        <i class="fa-solid fa-timeline w-5 text-primary"></i> Parcours
+      </a>
+      <a href="#contact" class="mobile-nav-link flex items-center gap-3 py-2 text-on-surface font-label text-label-lg hover:text-primary">
+        <i class="fa-solid fa-envelope w-5 text-primary"></i> Contact
+      </a>
+      <div class="pt-2 border-t border-outline flex gap-3">
+        <a href="https://github.com/lapuissancerochi" target="_blank" class="flex-1 py-2 text-center rounded border border-outline font-label text-label-md text-on-surface hover:border-primary hover:text-primary">
+          <i class="fa-brands fa-github mr-1"></i> GitHub
+        </a>
+        <a href="https://wa.me/237692088248" target="_blank" class="flex-1 py-2 text-center rounded bg-primary text-on-primary font-label text-label-md font-semibold">
+          <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp
+        </a>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- ===================================================
-       HERO
-  =================================================== -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <canvas id="particles-canvas"></canvas>
-    <div class="hero-grid"></div>
+  <main class="flex-1">
 
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <div class="hero-badge">
-            <span class="badge">
-              <i class="fa-solid fa-circle" style="font-size:0.5rem; color:#22c55e;"></i>
-              Disponible pour missions &amp; opportunités
+    <!-- 1. HERO -->
+    <section id="hero" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin pt-16 pb-20 md:pt-24 md:pb-28 border-b border-outline-variant">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center">
+        <div class="lg:col-span-7 flex flex-col items-start gap-gutter-lg">
+          <!-- Status Badge -->
+          <span role="status" class="inline-flex items-center gap-gutter-sm px-3.5 py-1.5 rounded-full bg-primary-container border border-outline text-on-primary-container font-label text-label-md">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse" aria-hidden="true"></span>
+            <span>Disponible — CDI, Freelance &amp; Partenariats</span>
+          </span>
+
+          <div class="flex flex-col gap-gutter-sm">
+            <p class="font-label text-label-lg text-primary flex items-center gap-2">
+              <i class="fa-solid fa-terminal text-sm"></i> Zapfack Foka Joy Rochnel
+            </p>
+            <h1 class="font-display text-display-lg-mobile md:text-display-lg text-on-surface text-balance">
+              Développeur Full-Stack orienté architecture &amp; produit.
+            </h1>
+          </div>
+
+          <p class="font-body text-body-lg text-on-surface-variant max-w-prose text-pretty">
+            Je conçois des applications web fiables, des applications mobiles performantes et des APIs scalables de bout en bout — avec une expertise forte en <strong class="text-primary font-medium">Django</strong>, <strong class="text-primary font-medium">React / Node.js</strong>, <strong class="text-primary font-medium">React Native &amp; Expo</strong>, en synergie avec les projets <strong class="text-on-surface font-medium">DonaAyem Tech</strong>.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-gutter-md pt-gutter-xs">
+            <a href="#projets" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3 rounded bg-primary text-on-primary font-label text-label-lg font-semibold transition-all duration-state-change hover:bg-secondary hover:shadow-[0_0_20px_rgba(0,255,136,0.4)]">
+              <span>Voir les projets</span>
+              <i class="fa-solid fa-arrow-down text-sm"></i>
+            </a>
+
+            <a href="#contact" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3 rounded border border-outline bg-surface-container text-on-surface font-label text-label-lg transition-colors duration-state-change hover:border-primary hover:text-primary">
+              <i class="fa-solid fa-comments text-primary text-sm"></i>
+              <span>Discuter d'un projet</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal Spec Card -->
+        <div class="lg:col-span-5">
+          <div class="rounded-md bg-surface-container-low border border-outline-variant overflow-hidden shadow-2xl">
+            <div class="px-gutter-md py-3 bg-surface-container border-b border-outline-variant flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-[#FF5F56]" aria-hidden="true"></span>
+                <span class="w-3 h-3 rounded-full bg-[#FFBD2E]" aria-hidden="true"></span>
+                <span class="w-3 h-3 rounded-full bg-[#27C93F]" aria-hidden="true"></span>
+              </div>
+              <span class="font-label text-label-sm text-on-surface-variant flex items-center gap-1.5">
+                <i class="fa-solid fa-code text-xs text-primary"></i> profile.config.ts
+              </span>
+            </div>
+            <div class="p-gutter-lg font-label text-label-md leading-relaxed flex flex-col gap-1">
+              <p class="text-on-surface-variant"><span class="text-primary">const</span> developer = {</p>
+              <p class="pl-gutter-md text-on-surface">nom: <span class="text-secondary">"Zapfack Foka Joy Rochnel"</span>,</p>
+              <p class="pl-gutter-md text-on-surface">role: <span class="text-secondary">"Développeur Full-Stack"</span>,</p>
+              <p class="pl-gutter-md text-on-surface">partenaire: <span class="text-secondary">"DonaAyem Tech"</span>,</p>
+              <p class="pl-gutter-md text-on-surface">specialite: [<span class="text-secondary">"Django"</span>, <span class="text-secondary">"React"</span>, <span class="text-secondary">"Node.js"</span>],</p>
+              <p class="pl-gutter-md text-on-surface">mobile: [<span class="text-secondary">"React Native"</span>, <span class="text-secondary">"Expo"</span>],</p>
+              <p class="pl-gutter-md text-on-surface">focus: <span class="text-secondary">"Clean Architecture &amp; Scalability"</span></p>
+              <p class="text-on-surface-variant">};</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. À PROPOS -->
+    <section id="apropos" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20 border-b border-outline-variant">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center">
+        <!-- Visual Avatar Card -->
+        <div class="lg:col-span-5">
+          <div class="rounded-md bg-surface-container border border-outline-variant p-gutter-md flex flex-col items-center justify-center text-center gap-4 py-12 relative overflow-hidden group">
+            <div class="w-32 h-32 rounded-full border-2 border-primary/40 bg-surface-container-high flex items-center justify-center shadow-[0_0_30px_rgba(0,255,136,0.15)] group-hover:border-primary transition-all duration-300">
+              <i class="fa-solid fa-laptop-code text-5xl text-primary"></i>
+            </div>
+            <div class="flex flex-col">
+              <h3 class="font-title text-title-lg text-on-surface font-semibold">Joy Rochnel</h3>
+              <p class="font-label text-label-md text-primary">Développeur Full-Stack · Cameroun</p>
+            </div>
+            <div class="flex items-center gap-3 pt-2">
+              <a href="https://github.com/lapuissancerochi" target="_blank" class="w-10 h-10 rounded-full border border-outline bg-surface-container-low flex items-center justify-center text-on-surface hover:text-primary hover:border-primary transition-colors" aria-label="GitHub">
+                <i class="fa-brands fa-github text-lg"></i>
+              </a>
+              <a href="mailto:lapuissancerochi@gmail.com" class="w-10 h-10 rounded-full border border-outline bg-surface-container-low flex items-center justify-center text-on-surface hover:text-primary hover:border-primary transition-colors" aria-label="Email">
+                <i class="fa-solid fa-envelope text-base"></i>
+              </a>
+              <a href="https://wa.me/237692088248" target="_blank" class="w-10 h-10 rounded-full border border-outline bg-surface-container-low flex items-center justify-center text-on-surface hover:text-primary hover:border-primary transition-colors" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 flex flex-col gap-gutter-lg">
+          <div class="flex flex-col gap-gutter-sm">
+            <span class="font-label text-label-md text-primary flex items-center gap-2">
+              <i class="fa-solid fa-id-card"></i> À propos
+            </span>
+            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance">
+              Transformer des besoins complexes en produits rapides et maintenables.
+            </h2>
+          </div>
+
+          <div class="flex flex-col gap-gutter-md max-w-prose">
+            <p class="font-body text-body-md text-on-surface-variant text-pretty">
+              Développeur Full-Stack passionné, j'interviens sur l'ensemble du cycle de développement logiciel : conception de backends robustes en <strong class="text-on-surface font-semibold">Django</strong> et <strong class="text-on-surface font-semibold">Node.js</strong>, création d'applications web interactives en <strong class="text-on-surface font-semibold">React &amp; Tailwind CSS</strong>, et développement mobile cross-platform avec <strong class="text-on-surface font-semibold">React Native &amp; Expo</strong>.
+            </p>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty">
+              Actuellement en partenariat et stage avec l'entreprise <strong class="text-primary font-semibold">DonaAyem Tech</strong> et ouvert à des opportunités stimulantes (CDI, stages avancés, missions freelance ou projets innovants).
+            </p>
+          </div>
+
+          <!-- Stats Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-gutter-md pt-gutter-sm">
+            <div class="p-gutter-md rounded-md bg-surface-container border border-outline-variant flex flex-col gap-gutter-xs">
+              <div class="flex items-center justify-between text-primary">
+                <span class="font-headline text-headline-md tabular-nums font-bold">3+ ans</span>
+                <i class="fa-solid fa-clock text-lg opacity-80"></i>
+              </div>
+              <span class="font-label text-label-md text-on-surface-variant">Expérience Web &amp; Mobile</span>
+            </div>
+            <div class="p-gutter-md rounded-md bg-surface-container border border-outline-variant flex flex-col gap-gutter-xs">
+              <div class="flex items-center justify-between text-primary">
+                <span class="font-headline text-headline-md tabular-nums font-bold">15+</span>
+                <i class="fa-solid fa-diagram-project text-lg opacity-80"></i>
+              </div>
+              <span class="font-label text-label-md text-on-surface-variant">Projets réalisés</span>
+            </div>
+            <div class="p-gutter-md rounded-md bg-surface-container border border-outline-variant flex flex-col gap-gutter-xs">
+              <div class="flex items-center justify-between text-primary">
+                <span class="font-headline text-headline-md tabular-nums font-bold">100%</span>
+                <i class="fa-solid fa-handshake-angle text-lg opacity-80"></i>
+              </div>
+              <span class="font-label text-label-md text-on-surface-variant">Rigueur &amp; Disponibilité</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. COMPÉTENCES -->
+    <section id="competences" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20 border-b border-outline-variant">
+      <div class="flex flex-col gap-gutter-sm mb-12 max-w-2xl">
+        <span class="font-label text-label-md text-primary flex items-center gap-2">
+          <i class="fa-solid fa-gears"></i> Compétences techniques
+        </span>
+        <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance">
+          Une stack technique complète, éprouvée en production.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg items-stretch">
+        
+        <!-- Skill Card 1: Backend (Django & APIs - Prio 1) -->
+        <article class="h-full flex flex-col justify-between gap-gutter-lg p-gutter-lg rounded-md bg-surface-container border border-outline-variant hover:border-primary/50 transition-colors">
+          <div class="flex flex-col gap-gutter-md">
+            <header class="flex items-center justify-between gap-gutter-sm">
+              <div class="flex items-center gap-gutter-sm">
+                <i class="fa-solid fa-server text-xl text-primary"></i>
+                <h3 class="font-title text-title-lg text-on-surface">Backend &amp; APIs (Spécialité)</h3>
+              </div>
+              <span class="font-label text-label-md text-primary tabular-nums font-semibold">95%</span>
+            </header>
+            <div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+              <div class="h-full bg-primary rounded-full w-[95%]"></div>
+            </div>
+            <p class="font-body text-body-md text-on-surface-variant">
+              Architecture d'APIs REST ultra-sécurisées, logique métier avancée, ORM Django, authentification JWT, et backends Node.js / Express et Laravel.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-cube text-primary"></i> Django / DRF
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-brands fa-node-js text-primary"></i> Node.js
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-brands fa-laravel text-primary"></i> Laravel
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-network-wired text-primary"></i> REST API
             </span>
           </div>
+        </article>
 
-          <h1 class="hero-title">
-            Bonjour, je suis<br />
-            <span class="gradient-text">Zapfack Joy Rochnel</span>
-          </h1>
+        <!-- Skill Card 2: Frontend & Mobile (React, React Native, Expo) -->
+        <article class="h-full flex flex-col justify-between gap-gutter-lg p-gutter-lg rounded-md bg-surface-container border border-outline-variant hover:border-primary/50 transition-colors">
+          <div class="flex flex-col gap-gutter-md">
+            <header class="flex items-center justify-between gap-gutter-sm">
+              <div class="flex items-center gap-gutter-sm">
+                <i class="fa-brands fa-react text-xl text-primary"></i>
+                <h3 class="font-title text-title-lg text-on-surface">Frontend Web &amp; Mobile</h3>
+              </div>
+              <span class="font-label text-label-md text-primary tabular-nums font-semibold">92%</span>
+            </header>
+            <div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+              <div class="h-full bg-primary rounded-full w-[92%]"></div>
+            </div>
+            <p class="font-body text-body-md text-on-surface-variant">
+              Interfaces web modernes et applications mobiles cross-platform iOS &amp; Android fluides avec Expo et Tailwind CSS pour un rendu soigné.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-brands fa-react text-primary"></i> React.js
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-mobile-screen-button text-primary"></i> React Native
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-bolt text-primary"></i> Expo
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-paintbrush text-primary"></i> Tailwind CSS
+            </span>
+          </div>
+        </article>
 
-          <p class="hero-subtitle">
-            <span class="typewriter" id="typewriter"></span><span class="cursor"></span>
+        <!-- Skill Card 3: Databases & Données -->
+        <article class="h-full flex flex-col justify-between gap-gutter-lg p-gutter-lg rounded-md bg-surface-container border border-outline-variant hover:border-primary/50 transition-colors">
+          <div class="flex flex-col gap-gutter-md">
+            <header class="flex items-center justify-between gap-gutter-sm">
+              <div class="flex items-center gap-gutter-sm">
+                <i class="fa-solid fa-database text-xl text-primary"></i>
+                <h3 class="font-title text-title-lg text-on-surface">Bases de données &amp; Stockage</h3>
+              </div>
+              <span class="font-label text-label-md text-primary tabular-nums font-semibold">88%</span>
+            </header>
+            <div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+              <div class="h-full bg-primary rounded-full w-[88%]"></div>
+            </div>
+            <p class="font-body text-body-md text-on-surface-variant">
+              Modélisation relationnelle rigoureuse, requêtes SQL optimisées, migrations automatisées et intégrité des données d'entreprise.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-database text-primary"></i> PostgreSQL
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-table text-primary"></i> MySQL
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-hard-drive text-primary"></i> SQLite
+            </span>
+          </div>
+        </article>
+
+        <!-- Skill Card 4: Méthodes & Outils -->
+        <article class="h-full flex flex-col justify-between gap-gutter-lg p-gutter-lg rounded-md bg-surface-container border border-outline-variant hover:border-primary/50 transition-colors">
+          <div class="flex flex-col gap-gutter-md">
+            <header class="flex items-center justify-between gap-gutter-sm">
+              <div class="flex items-center gap-gutter-sm">
+                <i class="fa-solid fa-toolbox text-xl text-primary"></i>
+                <h3 class="font-title text-title-lg text-on-surface">Outils &amp; Méthodologies</h3>
+              </div>
+              <span class="font-label text-label-md text-primary tabular-nums font-semibold">90%</span>
+            </header>
+            <div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+              <div class="h-full bg-primary rounded-full w-[90%]"></div>
+            </div>
+            <p class="font-body text-body-md text-on-surface-variant">
+              Collaboration en équipe via Git/GitHub, respect des méthodes Agiles (Scrum), conteneurisation Docker et documentation claire.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-brands fa-git-alt text-primary"></i> Git &amp; GitHub
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-rotate text-primary"></i> Agile / Scrum
+            </span>
+            <span class="px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant text-on-surface font-label text-label-sm flex items-center gap-1.5">
+              <i class="fa-brands fa-docker text-primary"></i> Docker
+            </span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. PROJETS (4 Projets en cards) -->
+    <section id="projets" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20 border-b border-outline-variant">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter-md mb-12">
+        <div class="flex flex-col gap-gutter-sm max-w-2xl">
+          <span class="font-label text-label-md text-primary flex items-center gap-2">
+            <i class="fa-solid fa-folder-open"></i> Projets phares
+          </span>
+          <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance">
+            Réalisations concrètes &amp; architectures déployées.
+          </h2>
+        </div>
+        <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-gutter-xs font-label text-label-lg text-primary hover:text-secondary transition-colors">
+          <span>Explorer mon GitHub</span>
+          <i class="fa-brands fa-github text-lg ml-1"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg items-stretch">
+        
+        <!-- Project 1: Django API -->
+        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(0,255,136,0.1)]">
+          <div class="flex flex-col gap-gutter-md">
+            <div class="h-44 rounded bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-80"></div>
+              <i class="fa-solid fa-server text-4xl text-primary mb-2 relative z-10 group-hover:scale-110 transition-transform"></i>
+              <span class="font-label text-label-sm text-secondary relative z-10">DJANGO REST FRAMEWORK</span>
+              <p class="font-title text-title-md text-on-surface relative z-10 font-semibold">Plateforme de Gestion &amp; API Métier</p>
+            </div>
+            
+            <header class="flex items-start justify-between gap-gutter-sm">
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-label text-label-md text-primary">Backend · DonaAyem Tech &amp; Entreprise</span>
+                <h3 class="font-title text-title-lg text-on-surface">GestPro Enterprise API</h3>
+              </div>
+              <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" aria-label="Voir le projet sur GitHub" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+              </a>
+            </header>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty">
+              Backend haute disponibilité conçu avec Django REST et PostgreSQL. Authentification par token JWT, permissions modulaires par rôles et gestion de transactions métier volumineuses.
+            </p>
+          </div>
+          <footer class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-outline-variant">
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Django</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">DRF</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">PostgreSQL</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Python</span>
+          </footer>
+        </article>
+
+        <!-- Project 2: Mobile React Native & Expo -->
+        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(0,255,136,0.1)]">
+          <div class="flex flex-col gap-gutter-md">
+            <div class="h-44 rounded bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-80"></div>
+              <i class="fa-solid fa-mobile-screen text-4xl text-primary mb-2 relative z-10 group-hover:scale-110 transition-transform"></i>
+              <span class="font-label text-label-sm text-secondary relative z-10">EXPO &amp; REACT NATIVE</span>
+              <p class="font-title text-title-md text-on-surface relative z-10 font-semibold">Application Mobile Cross-Platform</p>
+            </div>
+
+            <header class="flex items-start justify-between gap-gutter-sm">
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-label text-label-md text-primary">Mobile · iOS &amp; Android</span>
+                <h3 class="font-title text-title-lg text-on-surface">MarketCam Mobile</h3>
+              </div>
+              <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" aria-label="Voir le projet sur GitHub" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+              </a>
+            </header>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty">
+              Application mobile performante développée avec React Native et Expo. Navigation fluide, gestion du cache offline, notifications push et consommation d'APIs REST en temps réel.
+            </p>
+          </div>
+          <footer class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-outline-variant">
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">React Native</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Expo</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">JavaScript</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">REST</span>
+          </footer>
+        </article>
+
+        <!-- Project 3: Full-Stack React + Node.js -->
+        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(0,255,136,0.1)]">
+          <div class="flex flex-col gap-gutter-md">
+            <div class="h-44 rounded bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-80"></div>
+              <i class="fa-solid fa-chart-line text-4xl text-primary mb-2 relative z-10 group-hover:scale-110 transition-transform"></i>
+              <span class="font-label text-label-sm text-secondary relative z-10">REACT &amp; NODE.JS</span>
+              <p class="font-title text-title-md text-on-surface relative z-10 font-semibold">Tableau de Bord Analytique</p>
+            </div>
+
+            <header class="flex items-start justify-between gap-gutter-sm">
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-label text-label-md text-primary">Web App · React &amp; Node</span>
+                <h3 class="font-title text-title-lg text-on-surface">AnalytiX Dashboard</h3>
+              </div>
+              <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" aria-label="Voir le projet sur GitHub" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+              </a>
+            </header>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty">
+              Dashboard interactif pour visualiser des données en direct. Composants React personnalisés, stylisation Tailwind CSS soignée, et API Node.js/Express connectée à une base relationnelle.
+            </p>
+          </div>
+          <footer class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-outline-variant">
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">React</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Node.js</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Tailwind</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">MySQL</span>
+          </footer>
+        </article>
+
+        <!-- Project 4: Laravel & Tailwind -->
+        <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg rounded-md bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(0,255,136,0.1)]">
+          <div class="flex flex-col gap-gutter-md">
+            <div class="h-44 rounded bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center p-6 relative overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-80"></div>
+              <i class="fa-brands fa-laravel text-4xl text-primary mb-2 relative z-10 group-hover:scale-110 transition-transform"></i>
+              <span class="font-label text-label-sm text-secondary relative z-10">LARAVEL &amp; TAILWIND</span>
+              <p class="font-title text-title-md text-on-surface relative z-10 font-semibold">Portail Web &amp; Gestion de Services</p>
+            </div>
+
+            <header class="flex items-start justify-between gap-gutter-sm">
+              <div class="flex flex-col gap-gutter-xs">
+                <span class="font-label text-label-md text-primary">Web Full-Stack · Laravel</span>
+                <h3 class="font-title text-title-lg text-on-surface">ClinicFlow Platform</h3>
+              </div>
+              <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" aria-label="Voir le projet sur GitHub" class="inline-flex items-center justify-center w-9 h-9 rounded border border-outline-variant bg-surface-container-high text-on-surface hover:border-primary hover:text-primary transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+              </a>
+            </header>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty">
+              Application web de gestion avec prise de rendez-vous en ligne, validation automatisée, messagerie interne et panel d'administration complet propulsé par Laravel.
+            </p>
+          </div>
+          <footer class="flex flex-wrap items-center gap-gutter-sm pt-gutter-md border-t border-outline-variant">
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Laravel</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">PHP</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">Tailwind CSS</span>
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-label-sm">SQLite</span>
+          </footer>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 5. PARCOURS (Timeline expérience) -->
+    <section id="parcours" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20 border-b border-outline-variant">
+      <div class="flex flex-col gap-gutter-sm mb-12 max-w-2xl">
+        <span class="font-label text-label-md text-primary flex items-center gap-2">
+          <i class="fa-solid fa-route"></i> Parcours professionnel
+        </span>
+        <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance">
+          Expérience, collaborations &amp; réalisations.
+        </h2>
+      </div>
+
+      <div class="relative flex flex-col gap-gutter-lg pl-gutter-lg border-l border-outline">
+        
+        <!-- Milestone 1 -->
+        <div class="relative p-gutter-lg rounded-md bg-surface-container border border-outline-variant">
+          <span class="absolute -left-[37px] top-7 w-4 h-4 rounded-full bg-primary border-4 border-surface shadow-[0_0_10px_#00FF88]" aria-hidden="true"></span>
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter-xs mb-gutter-sm">
+            <div>
+              <h3 class="font-title text-title-lg text-on-surface font-semibold flex items-center gap-2">
+                <i class="fa-solid fa-briefcase text-primary text-base"></i> Développeur Full-Stack &amp; Stagiaire Partenaire
+              </h3>
+              <p class="font-label text-label-lg text-primary font-medium">DonaAyem Tech</p>
+            </div>
+            <span class="font-label text-label-md text-on-surface-variant tabular-nums">2024 — Présent</span>
+          </div>
+          <p class="font-body text-body-md text-on-surface-variant max-w-prose">
+            Participation active au développement de solutions numériques, conception d'APIs Django et d'applications front-end, intégration continue et collaboration technique sur des projets à forte valeur ajoutée.
           </p>
-
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">
-              <i class="fa-solid fa-rocket"></i> Voir mes projets
-            </a>
-            <a href="#contact" class="btn btn-outline">
-              <i class="fa-solid fa-paper-plane"></i> Me contacter
-            </a>
-            <a href="#" class="btn btn-outline">
-              <i class="fa-solid fa-download"></i> Télécharger le CV
-            </a>
-          </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="hero-avatar">
-            <div class="avatar-inner">👨‍💻</div>
+        <!-- Milestone 2 -->
+        <div class="relative p-gutter-lg rounded-md bg-surface-container border border-outline-variant">
+          <span class="absolute -left-[37px] top-7 w-4 h-4 rounded-full bg-outline border-4 border-surface" aria-hidden="true"></span>
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter-xs mb-gutter-sm">
+            <div>
+              <h3 class="font-title text-title-lg text-on-surface font-semibold flex items-center gap-2">
+                <i class="fa-solid fa-laptop-code text-secondary text-base"></i> Développeur Full-Stack Freelance
+              </h3>
+              <p class="font-label text-label-lg text-secondary">Projets Clients &amp; Partenaires</p>
+            </div>
+            <span class="font-label text-label-md text-on-surface-variant tabular-nums">2023 — 2024</span>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="scroll-indicator">
-      <div class="scroll-dot"></div>
-      <span>Défiler</span>
-    </div>
-  </section>
-
-  <!-- ===================================================
-       ABOUT
-  =================================================== -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="about-grid">
-
-        <div class="about-text" data-aos="fade-right">
-          <div class="divider"></div>
-          <h2 class="section-title">À propos de moi</h2>
-          <p>
-            Je suis <strong>Zapfack Foka Joy Rochnel</strong>, développeur Full-Stack passionné basé au
-            <strong>Cameroun 🇨🇲</strong>, spécialisé dans la création d'applications web et mobiles modernes,
-            performantes et scalables.
+          <p class="font-body text-body-md text-on-surface-variant max-w-prose">
+            Conception et livraison de plateformes web complètes, applications mobiles réactives et dashboards sur-mesure pour indépendants et entreprises locales.
           </p>
-          <p>
-            Avec une maîtrise approfondie de <strong>Django</strong> pour le backend et de <strong>React / React Native</strong>
-            pour le frontend et le mobile, je suis capable de livrer des produits complets, du serveur à l'interface
-            utilisateur. J'aime résoudre des problèmes complexes et transformer des idées en solutions concrètes.
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="relative p-gutter-lg rounded-md bg-surface-container border border-outline-variant">
+          <span class="absolute -left-[37px] top-7 w-4 h-4 rounded-full bg-outline border-4 border-surface" aria-hidden="true"></span>
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter-xs mb-gutter-sm">
+            <div>
+              <h3 class="font-title text-title-lg text-on-surface font-semibold flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap text-secondary text-base"></i> Formation &amp; Approfondissement Technique
+              </h3>
+              <p class="font-label text-label-lg text-secondary">Architecture Logicielle &amp; Écosystème Web/Mobile</p>
+            </div>
+            <span class="font-label text-label-md text-on-surface-variant tabular-nums">2021 — 2023</span>
+          </div>
+          <p class="font-body text-body-md text-on-surface-variant max-w-prose">
+            Maîtrise approfondie des langages Python, JavaScript, TypeScript, PHP, structuration de bases de données relationnelles et pratiques de clean code.
           </p>
-          <p>
-            Actuellement en partenariat/stage avec <strong>DonaAyem Tech</strong>, je continue à élargir
-            mon expertise technique tout en contribuant à des projets impactants. Je suis ouvert aux
-            missions freelance, aux offres CDI/stage, et aux collaborations business.
-          </p>
-
-          <div class="about-stats">
-            <div class="stat-card">
-              <div class="stat-number">3+</div>
-              <div class="stat-label">Années d'expérience</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Projets réalisés</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">6</div>
-              <div class="stat-label">Technologies maîtrisées</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Satisfaction client</div>
-            </div>
-          </div>
         </div>
-
-        <div class="about-info" data-aos="fade-left" data-aos-delay="100">
-          <div class="info-card">
-            <div class="info-icon"><i class="fa-solid fa-user"></i></div>
-            <div>
-              <div class="info-label">Nom complet</div>
-              <div class="info-value">Zapfack Foka Joy Rochnel</div>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon"><i class="fa-solid fa-briefcase"></i></div>
-            <div>
-              <div class="info-label">Spécialité</div>
-              <div class="info-value">Développeur Full-Stack</div>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon"><i class="fa-solid fa-map-pin"></i></div>
-            <div>
-              <div class="info-label">Localisation</div>
-              <div class="info-value">Cameroun 🇨🇲</div>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
-            <div>
-              <div class="info-label">Email</div>
-              <div class="info-value">
-                <a href="mailto:lapuissancerochi@gmail.com">lapuissancerochi@gmail.com</a>
-              </div>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
-            <div>
-              <div class="info-label">Téléphone / WhatsApp</div>
-              <div class="info-value">
-                <a href="tel:+237692088248">+237 692 088 248</a>
-              </div>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon"><i class="fa-brands fa-github"></i></div>
-            <div>
-              <div class="info-label">GitHub</div>
-              <div class="info-value">
-                <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener">
-                  github.com/lapuissancerochi
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon"><i class="fa-solid fa-building"></i></div>
-            <div>
-              <div class="info-label">Partenaire actuel</div>
-              <div class="info-value">DonaAyem Tech</div>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================================================
-       SKILLS
-  =================================================== -->
-  <section id="skills" class="section">
-    <div class="container">
-      <div class="divider" data-aos="fade-right"></div>
-      <h2 class="section-title" data-aos="fade-right">Compétences techniques</h2>
-      <p class="section-subtitle" data-aos="fade-right" data-aos-delay="50">
-        Mon stack technique construit au fil des projets, des formations et de la pratique quotidienne.
+    <!-- 6. CONTACT -->
+    <section id="contact" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-start">
+        <div class="lg:col-span-5 flex flex-col gap-gutter-lg">
+          <div class="flex flex-col gap-gutter-sm">
+            <span class="font-label text-label-md text-primary flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Contact direct
+            </span>
+            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-surface text-balance">
+              Construisons votre prochain produit ensemble.
+            </h2>
+            <p class="font-body text-body-md text-on-surface-variant text-pretty">
+              Vous êtes recruteur pour un poste CDI / Stage, client porteur d'un projet freelance, ou partenaire DonaAyem Tech ? Discutons-en dès aujourd'hui !
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-gutter-sm">
+            <!-- Email Direct -->
+            <a href="mailto:lapuissancerochi@gmail.com" class="flex items-center justify-between p-gutter-md rounded-md bg-surface-container border border-outline-variant hover:border-primary transition-colors group">
+              <div class="flex items-center gap-gutter-md">
+                <div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                  <i class="fa-solid fa-envelope text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label text-label-sm text-on-surface-variant">Email direct</span>
+                  <span class="font-body text-body-md text-on-surface font-medium">lapuissancerochi@gmail.com</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-on-surface-variant group-hover:text-primary transition-colors"></i>
+            </a>
+
+            <!-- Téléphone / WhatsApp -->
+            <a href="https://wa.me/237692088248" target="_blank" rel="noopener" class="flex items-center justify-between p-gutter-md rounded-md bg-surface-container border border-outline-variant hover:border-primary transition-colors group">
+              <div class="flex items-center gap-gutter-md">
+                <div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+                  <i class="fa-brands fa-whatsapp text-xl"></i>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label text-label-sm text-on-surface-variant">WhatsApp / Mobile</span>
+                  <span class="font-body text-body-md text-on-surface font-medium">+237 692 088 248</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-on-surface-variant group-hover:text-primary transition-colors"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-gutter-md rounded-md bg-surface-container border border-outline-variant hover:border-primary transition-colors group">
+              <div class="flex items-center gap-gutter-md">
+                <div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-on-surface group-hover:text-primary group-hover:scale-105 transition-transform">
+                  <i class="fa-brands fa-github text-xl"></i>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label text-label-sm text-on-surface-variant">GitHub</span>
+                  <span class="font-body text-body-md text-on-surface font-medium">github.com/lapuissancerochi</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-on-surface-variant group-hover:text-primary transition-colors"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-7">
+          <form id="contact-form" class="p-gutter-lg md:p-gutter-xl rounded-md bg-surface-container border border-outline-variant flex flex-col gap-gutter-lg shadow-xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md">
+              <label class="flex flex-col gap-gutter-xs">
+                <span class="font-label text-label-md text-on-surface">Votre Nom complet</span>
+                <input type="text" id="form-name" name="name" required placeholder="Ex: Marc Nkodo" class="w-full px-gutter-md py-3 rounded bg-surface-container-low border border-outline text-on-surface placeholder:text-on-surface-variant font-body text-body-md focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors">
+              </label>
+
+              <label class="flex flex-col gap-gutter-xs">
+                <span class="font-label text-label-md text-on-surface">Votre adresse e-mail</span>
+                <input type="email" id="form-email" name="email" required placeholder="nom@entreprise.com" inputmode="email" class="w-full px-gutter-md py-3 rounded bg-surface-container-low border border-outline text-on-surface placeholder:text-on-surface-variant font-body text-body-md focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors">
+              </label>
+            </div>
+
+            <label class="flex flex-col gap-gutter-xs">
+              <span class="font-label text-label-md text-on-surface">Objet de votre demande</span>
+              <select id="form-subject" name="subject" class="w-full px-gutter-md py-3 rounded bg-surface-container-low border border-outline text-on-surface font-body text-body-md focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors">
+                <option value="Opportunité CDI / Stage">Opportunité Recrutement : CDI / Stage</option>
+                <option value="Mission Freelance Web/Mobile">Mission Freelance : Développement Web ou Mobile</option>
+                <option value="Partenariat DonaAyem Tech">Collaboration ou Partenariat DonaAyem Tech</option>
+                <option value="Autre demande">Autre opportunité technique</option>
+              </select>
+            </label>
+
+            <label class="flex flex-col gap-gutter-xs">
+              <span class="font-label text-label-md text-on-surface">Votre message</span>
+              <textarea id="form-message" name="message" rows="4" required placeholder="Décrivez votre besoin, les technologies envisagées ou vos délais..." class="w-full px-gutter-md py-3 rounded bg-surface-container-low border border-outline text-on-surface placeholder:text-on-surface-variant font-body text-body-md focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors"></textarea>
+            </label>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-gutter-md pt-2">
+              <button type="submit" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3 rounded bg-primary text-on-primary font-label text-label-lg font-semibold transition-all duration-state-change hover:bg-secondary hover:shadow-[0_0_20px_rgba(0,255,136,0.3)]">
+                <i class="fa-solid fa-paper-plane text-sm"></i>
+                <span>Envoyer le message</span>
+              </button>
+
+              <p id="form-feedback" class="hidden font-label text-label-md text-primary flex items-center gap-1.5" role="status">
+                <i class="fa-solid fa-circle-check"></i> Message prêt ! Ouverture de votre messagerie...
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. FOOTER -->
+  <footer class="border-t border-outline-variant bg-surface-container-low">
+    <div class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-8 flex flex-col sm:flex-row items-center justify-between gap-gutter-md">
+      <div class="flex items-center gap-gutter-sm">
+        <span class="w-2.5 h-2.5 rounded-sm bg-primary shadow-[0_0_10px_#00FF88]" aria-hidden="true"></span>
+        <span class="font-label text-label-lg text-on-surface">joy.rochnel</span>
+        <span class="font-body text-body-md text-on-surface-variant">— Zapfack Foka Joy Rochnel</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-on-surface-variant">
+        <a href="https://github.com/lapuissancerochi" target="_blank" class="hover:text-primary transition-colors" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+        <a href="mailto:lapuissancerochi@gmail.com" class="hover:text-primary transition-colors" aria-label="Email"><i class="fa-solid fa-envelope text-lg"></i></a>
+        <a href="https://wa.me/237692088248" target="_blank" class="hover:text-primary transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+      </div>
+
+      <p class="font-label text-label-md text-on-surface-variant tabular-nums">
+        © 2026 Joy Rochnel · Partenaire DonaAyem Tech.
       </p>
-
-      <div class="skills-grid">
-
-        <!-- Left column: Skill bars -->
-        <div data-aos="fade-right" data-aos-delay="100">
-          <div class="skill-category">
-            <h3><i class="fa-solid fa-code"></i> Langages &amp; Frameworks principaux</h3>
-
-            <div class="skill-bar">
-              <div class="skill-bar-header">
-                <span class="skill-name">Django (Python)</span>
-                <span class="skill-pct">90%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar-header">
-                <span class="skill-name">React.js</span>
-                <span class="skill-pct">82%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar-header">
-                <span class="skill-name">Node.js</span>
-                <span class="skill-pct">78%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar-header">
-                <span class="skill-name">React Native / Expo</span>
-                <span class="skill-pct">80%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar-header">
-                <span class="skill-name">Laravel (PHP)</span>
-                <span class="skill-pct">72%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" data-width="72"></div></div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar-header">
-                <span class="skill-name">TypeScript</span>
-                <span class="skill-pct">75%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right column: Tech badges -->
-        <div data-aos="fade-left" data-aos-delay="150">
-          <div class="skill-category" style="margin-bottom: 32px;">
-            <h3><i class="fa-solid fa-layer-group"></i> Technologies &amp; Outils</h3>
-            <div class="badges-wrap">
-              <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
-              <span class="tech-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
-              <span class="tech-badge"><i class="fa-solid fa-t"></i> TypeScript</span>
-              <span class="tech-badge"><i class="fa-brands fa-php"></i> PHP</span>
-              <span class="tech-badge"><i class="fa-solid fa-database"></i> PostgreSQL</span>
-              <span class="tech-badge"><i class="fa-solid fa-database"></i> MySQL</span>
-              <span class="tech-badge"><i class="fa-solid fa-database"></i> SQLite</span>
-              <span class="tech-badge"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
-              <span class="tech-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
-              <span class="tech-badge"><i class="fa-brands fa-github"></i> GitHub</span>
-              <span class="tech-badge"><i class="fa-solid fa-plug"></i> REST API</span>
-              <span class="tech-badge"><i class="fa-brands fa-docker"></i> Docker</span>
-            </div>
-          </div>
-
-          <div class="skill-category" style="margin-bottom: 32px;">
-            <h3><i class="fa-solid fa-users"></i> Soft Skills &amp; Méthodes</h3>
-            <div class="badges-wrap">
-              <span class="tech-badge"><i class="fa-solid fa-rotate"></i> Agile / Scrum</span>
-              <span class="tech-badge"><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
-              <span class="tech-badge"><i class="fa-solid fa-comments"></i> Communication</span>
-              <span class="tech-badge"><i class="fa-solid fa-people-group"></i> Travail d'équipe</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <h3><i class="fa-solid fa-language"></i> Langues</h3>
-            <div class="badges-wrap">
-              <span class="tech-badge"><i class="fa-solid fa-flag"></i> Français – Natif</span>
-              <span class="tech-badge"><i class="fa-solid fa-globe"></i> Anglais – Intermédiaire</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================================================
-       PROJECTS
-  =================================================== -->
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="divider" data-aos="fade-right"></div>
-      <h2 class="section-title" data-aos="fade-right">Projets réalisés</h2>
-      <p class="section-subtitle" data-aos="fade-right" data-aos-delay="50">
-        Une sélection de projets qui illustrent ma capacité à concevoir et livrer des solutions complètes.
-      </p>
-
-      <div class="projects-grid">
-
-        <!-- Project 1 -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="project-banner banner-1">
-            <div class="project-emoji">🗂️</div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag tag-purple">Django</span>
-              <span class="project-tag tag-blue">REST API</span>
-              <span class="project-tag tag-blue">PostgreSQL</span>
-              <span class="project-tag tag-green">JWT Auth</span>
-            </div>
-            <h3 class="project-title">GestPro API – Gestion d'entreprise</h3>
-            <p class="project-desc">
-              Backend RESTful complet pour une application de gestion d'entreprise. Inclut la gestion
-              des employés, des projets, des tâches et de la facturation. Authentification JWT sécurisée,
-              permissions granulaires et documentation Swagger automatique.
-            </p>
-            <div class="project-links">
-              <a href="#" class="project-link link-github">
-                <i class="fa-brands fa-github"></i> Code source
-              </a>
-              <a href="#" class="project-link link-demo">
-                <i class="fa-solid fa-external-link-alt"></i> Documentation API
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-banner banner-2">
-            <div class="project-emoji">📱</div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag tag-blue">React Native</span>
-              <span class="project-tag tag-blue">Expo</span>
-              <span class="project-tag tag-purple">TypeScript</span>
-              <span class="project-tag tag-orange">Cross-platform</span>
-            </div>
-            <h3 class="project-title">MarketCam – App de commerce mobile</h3>
-            <p class="project-desc">
-              Application mobile cross-platform iOS/Android développée avec Expo et React Native.
-              Fonctionnalités : catalogue produits, panier, paiement mobile money, suivi de commandes
-              en temps réel et notifications push. Interface intuitive et UX optimisée.
-            </p>
-            <div class="project-links">
-              <a href="#" class="project-link link-github">
-                <i class="fa-brands fa-github"></i> Code source
-              </a>
-              <a href="#" class="project-link link-demo">
-                <i class="fa-solid fa-external-link-alt"></i> Démo
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="project-banner banner-3">
-            <div class="project-emoji">🏥</div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag tag-green">Laravel</span>
-              <span class="project-tag tag-green">PHP</span>
-              <span class="project-tag tag-blue">Tailwind CSS</span>
-              <span class="project-tag tag-blue">MySQL</span>
-            </div>
-            <h3 class="project-title">ClinicFlow – Gestion de clinique</h3>
-            <p class="project-desc">
-              Plateforme web complète de gestion de clinique médicale. Prise de rendez-vous en ligne,
-              dossiers patients, suivi des consultations, facturation et génération de rapports PDF.
-              Développée avec Laravel et Tailwind CSS pour une expérience moderne et responsive.
-            </p>
-            <div class="project-links">
-              <a href="#" class="project-link link-github">
-                <i class="fa-brands fa-github"></i> Code source
-              </a>
-              <a href="#" class="project-link link-demo">
-                <i class="fa-solid fa-external-link-alt"></i> Démo live
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="project-banner banner-4">
-            <div class="project-emoji">📊</div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag tag-orange">React.js</span>
-              <span class="project-tag tag-orange">Node.js</span>
-              <span class="project-tag tag-purple">JWT</span>
-              <span class="project-tag tag-blue">PostgreSQL</span>
-            </div>
-            <h3 class="project-title">AnalytiX – Tableau de bord interactif</h3>
-            <p class="project-desc">
-              Application Full-Stack avec un tableau de bord analytique temps réel. Backend Node.js/Express
-              avec authentification JWT sécurisée, frontend React avec visualisations Chart.js, filtres
-              avancés et export de données. Déployé sur Railway &amp; Vercel.
-            </p>
-            <div class="project-links">
-              <a href="#" class="project-link link-github">
-                <i class="fa-brands fa-github"></i> Code source
-              </a>
-              <a href="#" class="project-link link-demo">
-                <i class="fa-solid fa-external-link-alt"></i> Démo live
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================================================
-       EXPERIENCE / TIMELINE
-  =================================================== -->
-  <section id="experience" class="section">
-    <div class="container">
-      <div class="divider" data-aos="fade-right"></div>
-      <h2 class="section-title" data-aos="fade-right">Parcours &amp; Expérience</h2>
-      <p class="section-subtitle" data-aos="fade-right" data-aos-delay="50">
-        Mon évolution professionnelle et académique dans le développement logiciel.
-      </p>
-
-      <div class="timeline">
-
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="0">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2024 – Présent</div>
-          <div class="timeline-card">
-            <div class="timeline-role">Développeur Full-Stack – Partenariat / Stage</div>
-            <div class="timeline-company">
-              <i class="fa-solid fa-building"></i> DonaAyem Tech · Cameroun
-            </div>
-            <ul class="timeline-desc">
-              <li>Conception et développement d'applications web et mobiles pour des clients variés</li>
-              <li>Architecture API REST avec Django et intégration frontend React/React Native</li>
-              <li>Collaboration en méthodologie Agile/Scrum avec l'équipe technique</li>
-              <li>Revue de code, documentation technique et déploiement sur serveurs cloud</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2023 – 2024</div>
-          <div class="timeline-card">
-            <div class="timeline-role">Développeur Full-Stack Freelance</div>
-            <div class="timeline-company">
-              <i class="fa-solid fa-laptop-code"></i> Indépendant · Remote
-            </div>
-            <ul class="timeline-desc">
-              <li>Développement de sites web et d'API pour des PME et startups camerounaises</li>
-              <li>Création d'applications e-commerce avec Laravel et intégrations de paiement</li>
-              <li>Migration de systèmes legacy vers des architectures modernes Django/React</li>
-              <li>Maintenance, optimisation des performances et support client</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2022 – 2023</div>
-          <div class="timeline-card">
-            <div class="timeline-role">Apprentissage intensif &amp; premiers projets</div>
-            <div class="timeline-company">
-              <i class="fa-solid fa-graduation-cap"></i> Auto-formation &amp; Bootcamps Online
-            </div>
-            <ul class="timeline-desc">
-              <li>Formation intensive Django, React, Node.js via plateformes en ligne (Udemy, freeCodeCamp)</li>
-              <li>Réalisation de projets personnels pour consolider les acquis théoriques</li>
-              <li>Participation à des hackathons locaux et contribution à des projets open-source</li>
-              <li>Maîtrise des outils Git, GitHub, déploiement Heroku/Railway</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2020 – 2022</div>
-          <div class="timeline-card">
-            <div class="timeline-role">Formation en Informatique</div>
-            <div class="timeline-company">
-              <i class="fa-solid fa-university"></i> Institut Supérieur · Cameroun
-            </div>
-            <ul class="timeline-desc">
-              <li>Bases solides en algorithmique, structures de données et programmation orientée objet</li>
-              <li>Projets académiques en développement web avec PHP, JavaScript et MySQL</li>
-              <li>Découverte des systèmes GNU/Linux et de l'administration serveur de base</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================================================
-       CONTACT
-  =================================================== -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="divider" data-aos="fade-right"></div>
-      <h2 class="section-title" data-aos="fade-right">Travaillons ensemble</h2>
-      <p class="section-subtitle" data-aos="fade-right" data-aos-delay="50">
-        Vous avez un projet, une opportunité ou une question ? N'hésitez pas à me contacter.
-      </p>
-
-      <div class="contact-grid">
-
-        <!-- Left: Contact info -->
-        <div data-aos="fade-right" data-aos-delay="100">
-          <div class="contact-info">
-            <h3>Entrons en contact</h3>
-            <p>
-              Que vous soyez un recruteur, un client freelance ou un partenaire potentiel,
-              je suis toujours ouvert aux nouvelles opportunités. Répondez-moi sous 24h !
-            </p>
-          </div>
-
-          <div class="contact-links">
-            <a href="mailto:lapuissancerochi@gmail.com" class="contact-link-item">
-              <div class="contact-link-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div>
-                <div class="contact-link-label">Email</div>
-                <div class="contact-link-value">lapuissancerochi@gmail.com</div>
-              </div>
-            </a>
-            <a href="tel:+237692088248" class="contact-link-item">
-              <div class="contact-link-icon"><i class="fa-brands fa-whatsapp"></i></div>
-              <div>
-                <div class="contact-link-label">Téléphone / WhatsApp</div>
-                <div class="contact-link-value">+237 692 088 248</div>
-              </div>
-            </a>
-            <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" class="contact-link-item">
-              <div class="contact-link-icon"><i class="fa-brands fa-github"></i></div>
-              <div>
-                <div class="contact-link-label">GitHub</div>
-                <div class="contact-link-value">github.com/lapuissancerochi</div>
-              </div>
-            </a>
-            <a href="#" class="contact-link-item">
-              <div class="contact-link-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-              <div>
-                <div class="contact-link-label">LinkedIn</div>
-                <div class="contact-link-value">Voir le profil →</div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: CTAs -->
-        <div class="contact-cta-block" data-aos="fade-left" data-aos-delay="100">
-
-          <div class="cta-card">
-            <h4>💼 Recruteurs &amp; Employeurs</h4>
-            <p>Je suis ouvert aux offres CDI/CDD et aux stages enrichissants dans des équipes dynamiques.</p>
-            <a href="mailto:lapuissancerochi@gmail.com?subject=Opportunité%20professionnelle%20–%20Joy%20Rochnel"
-               class="btn btn-primary">
-              <i class="fa-solid fa-envelope"></i> Envoyer une offre
-            </a>
-          </div>
-
-          <div class="cta-card">
-            <h4>🚀 Clients Freelance</h4>
-            <p>Vous avez un projet web ou mobile ? Je peux vous aider à le concevoir et le livrer de A à Z.</p>
-            <a href="mailto:lapuissancerochi@gmail.com?subject=Projet%20Freelance%20–%20Devis"
-               class="btn btn-outline">
-              <i class="fa-solid fa-calculator"></i> Demander un devis
-            </a>
-          </div>
-
-          <div class="cta-card">
-            <h4>🤝 Partenaires Business</h4>
-            <p>Vous cherchez un développeur technique pour co-founder ou rejoindre votre startup ?</p>
-            <a href="mailto:lapuissancerochi@gmail.com?subject=Partenariat%20Business"
-               class="btn btn-outline">
-              <i class="fa-solid fa-handshake"></i> Parlons-en
-            </a>
-          </div>
-
-          <!-- Social row -->
-          <div class="social-row">
-            <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" class="social-btn" title="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="#" class="social-btn" title="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="mailto:lapuissancerochi@gmail.com" class="social-btn" title="Email">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a href="tel:+237692088248" class="social-btn" title="Téléphone">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a href="#" class="social-btn" title="Télécharger CV">
-              <i class="fa-solid fa-file-pdf"></i>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================================================
-       FOOTER
-  =================================================== -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <span class="footer-logo gradient-text">&lt;JoyRochnel /&gt;</span>
-        <p class="footer-copy">
-          © 2024 <span>Zapfack Foka Joy Rochnel</span>. Développé avec ❤️ &amp; ☕ au Cameroun.
-        </p>
-        <div style="display:flex; gap:12px;">
-          <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener" class="social-btn" style="width:36px;height:36px;font-size:0.95rem;" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="#" class="social-btn" style="width:36px;height:36px;font-size:0.95rem;" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
-      </div>
     </div>
   </footer>
 
-  <!-- ===================================================
-       SCRIPTS
-  =================================================== -->
-
-  <!-- AOS library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
+  <!-- Interactive Scripts -->
   <script>
-    // =====================================================
-    // AOS INIT
-    // =====================================================
-    AOS.init({
-      duration: 700,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 60
-    });
+    (function () {
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
 
-    // =====================================================
-    // NAVBAR – scroll behavior & active section tracking
-    // =====================================================
-    const navbar = document.getElementById('navbar');
-
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    // Highlight active nav link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinksAll = document.querySelectorAll('.nav-links a');
-
-    function activateNav() {
-      let current = '';
-      sections.forEach(sec => {
-        const top = sec.offsetTop - 100;
-        if (window.scrollY >= top) current = sec.getAttribute('id');
-      });
-      navLinksAll.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-      });
-    }
-    window.addEventListener('scroll', activateNav, { passive: true });
-
-    // =====================================================
-    // HAMBURGER MENU
-    // =====================================================
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-    });
-
-    // Close mobile menu on link click
-    mobileMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-      });
-    });
-
-    // =====================================================
-    // TYPEWRITER EFFECT
-    // =====================================================
-    const phrases = [
-      'Développeur Full-Stack 🚀',
-      'Expert Django & REST API 🐍',
-      'React & React Native Dev 📱',
-      'Passionné par le code propre 💻',
-      'Disponible en freelance 🌍',
-    ];
-    let pIndex = 0, cIndex = 0, deleting = false;
-    const typeEl = document.getElementById('typewriter');
-
-    function type() {
-      const phrase = phrases[pIndex];
-      if (!deleting) {
-        typeEl.textContent = phrase.substring(0, cIndex + 1);
-        cIndex++;
-        if (cIndex === phrase.length) {
-          deleting = true;
-          setTimeout(type, 1800);
-          return;
-        }
-      } else {
-        typeEl.textContent = phrase.substring(0, cIndex - 1);
-        cIndex--;
-        if (cIndex === 0) {
-          deleting = false;
-          pIndex = (pIndex + 1) % phrases.length;
-        }
-      }
-      setTimeout(type, deleting ? 50 : 80);
-    }
-    type();
-
-    // =====================================================
-    // SKILL BAR ANIMATION
-    // =====================================================
-    const skillFills = document.querySelectorAll('.skill-fill');
-
-    const barObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const fill = entry.target;
-          fill.style.width = fill.dataset.width + '%';
-          barObserver.unobserve(fill);
-        }
-      });
-    }, { threshold: 0.4 });
-
-    skillFills.forEach(fill => barObserver.observe(fill));
-
-    // =====================================================
-    // PARTICLE CANVAS
-    // =====================================================
-    (function() {
-      const canvas = document.getElementById('particles-canvas');
-      const ctx = canvas.getContext('2d');
-      let W, H, particles = [];
-
-      function resize() {
-        W = canvas.width = canvas.offsetWidth;
-        H = canvas.height = canvas.offsetHeight;
-      }
-
-      function rand(min, max) { return Math.random() * (max - min) + min; }
-
-      function createParticle() {
-        return {
-          x: rand(0, W),
-          y: rand(0, H),
-          r: rand(1, 2.5),
-          dx: rand(-0.3, 0.3),
-          dy: rand(-0.4, -0.1),
-          alpha: rand(0.2, 0.7),
-          color: Math.random() > 0.5 ? '#7c3aed' : '#6366f1'
-        };
-      }
-
-      function init() {
-        particles = [];
-        const count = Math.floor((W * H) / 12000);
-        for (let i = 0; i < count; i++) particles.push(createParticle());
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, W, H);
-        particles.forEach((p, i) => {
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = p.color;
-          ctx.globalAlpha = p.alpha;
-          ctx.fill();
-
-          p.x += p.dx;
-          p.y += p.dy;
-          p.alpha -= 0.001;
-
-          if (p.y < -5 || p.alpha <= 0) particles[i] = createParticle();
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function () {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.classList.replace('fa-bars', 'fa-xmark');
+          } else {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.replace('fa-xmark', 'fa-bars');
+          }
         });
-        ctx.globalAlpha = 1;
-        requestAnimationFrame(draw);
+
+        // Close menu when clicking nav link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.replace('fa-xmark', 'fa-bars');
+          });
+        });
       }
 
-      window.addEventListener('resize', () => { resize(); init(); });
-      resize();
-      init();
-      draw();
-    })();
+      // Contact Form Direct Mailto Interaction
+      const form = document.getElementById('contact-form');
+      const feedback = document.getElementById('form-feedback');
 
-    // =====================================================
-    // SMOOTH SCROLL for anchor links
-    // =====================================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
+      if (form) {
+        form.addEventListener('submit', function (e) {
           e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
+          const name = document.getElementById('form-name').value;
+          const email = document.getElementById('form-email').value;
+          const subject = document.getElementById('form-subject').value;
+          const message = document.getElementById('form-message').value;
+
+          if (feedback) feedback.classList.remove('hidden');
+
+          // Mailto link triggering user mail client with prefilled fields
+          const mailtoUrl = `mailto:lapuissancerochi@gmail.com?subject=${encodeURIComponent(`[Portfolio] ${subject} - ${name}`)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+          
+          setTimeout(() => {
+            window.location.href = mailtoUrl;
+          }, 600);
+        });
+      }
+    })();
   </script>
+
 </body>
 </html>
