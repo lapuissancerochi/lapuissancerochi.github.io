@@ -9,14 +9,13 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   
-  <!-- Font Awesome 6.5.1 CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Font Awesome 6.5.1 CDN Officiel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Google Fonts: Geist, Geist Mono, Metrophobic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&family=Metrophobic&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
 
   <script id="tailwind-config">
     tailwind.config = {
@@ -95,19 +94,18 @@
     };
   </script>
   <style>
-    /* BORDER RADIUS ZERO STRICT - DESIGN ENTIÈREMENT CARRÉ */
+    /* BORDER RADIUS ZÉRO STRICT - DESIGN CARRÉ SUR TOUS LES ÉLÉMENTS */
     *, *::before, *::after {
       border-radius: 0px !important;
     }
     
-    .material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
     ::selection { background-color: #00FF88; color: #00210C; }
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #0A0A0A; }
     ::-webkit-scrollbar-thumb { background: #2E3531; }
     ::-webkit-scrollbar-thumb:hover { background: #00FF88; }
 
-    /* NAVBAR ACTIVE LINK : FONCÉ & MISE EN AVANT */
+    /* NAVBAR ACTIVE LINK : FONCÉ ET ENCADRÉ NÉON */
     .nav-link {
       padding: 6px 12px;
       transition: all 0.2s ease-in-out;
@@ -122,7 +120,7 @@
       background-color: #1E2220 !important;
       color: #00FF88 !important;
       border: 1px solid #00FF88 !important;
-      box-shadow: 0 0 12px rgba(0, 255, 136, 0.25);
+      box-shadow: 0 0 14px rgba(0, 255, 136, 0.25);
       font-weight: 600;
     }
     .mobile-nav-link.active {
@@ -135,7 +133,7 @@
 </head>
 <body class="bg-surface text-on-surface font-body antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col">
 
-  <!-- Navigation Sticky avec ScrollSpy actif foncé -->
+  <!-- Navigation Sticky avec ScrollSpy actif foncé & icônes Font Awesome -->
   <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant">
     <div class="max-w-6xl mx-auto px-gutter-md md:px-page-margin h-16 flex items-center justify-between gap-gutter-md">
       <a href="#hero" class="inline-flex items-center gap-gutter-sm font-label text-label-lg text-on-surface hover:text-primary transition-colors duration-state-change">
@@ -165,7 +163,7 @@
         </a>
       </nav>
 
-      <!-- Right Actions -->
+      <!-- Right Actions (Font Awesome) -->
       <div class="flex items-center gap-gutter-sm">
         <a href="https://github.com/lapuissancerochi" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center w-9 h-9 border border-outline bg-surface-container text-on-surface hover:text-primary hover:border-primary transition-colors" title="Profil GitHub">
           <i class="fa-brands fa-github text-base"></i>
@@ -221,7 +219,7 @@
         <div class="lg:col-span-7 flex flex-col items-start gap-gutter-lg">
           <!-- Status Badge Carré -->
           <span role="status" class="inline-flex items-center gap-gutter-sm px-3.5 py-1.5 bg-primary-container border border-outline text-on-primary-container font-label text-label-md">
-            <span class="w-2.5 h-2.5 bg-primary animate-pulse" aria-hidden="true"></span>
+            <i class="fa-solid fa-circle-dot text-xs text-primary animate-pulse"></i>
             <span>Disponible — CDI, Freelance &amp; Partenariats</span>
           </span>
 
@@ -235,7 +233,7 @@
           </div>
 
           <p class="font-body text-body-lg text-on-surface-variant max-w-prose text-pretty">
-            Je conçois des plateformes web fiables, des applications mobiles performantes et des APIs scalables — avec une maîtrise avancée de <strong class="text-primary font-medium">Django</strong>, <strong class="text-primary font-medium">React / Node.js</strong>, <strong class="text-primary font-medium">React Native &amp; Expo</strong>, en synergie avec <strong class="text-on-surface font-medium">DonaAyem Tech</strong>.
+            Je conçois des plateformes web fiables, des applications mobiles performantes et des APIs scalables — avec une maîtrise avancée de <strong class="text-primary font-medium">Django</strong>, <strong class="text-primary font-medium">React / Node.js</strong>, <strong class="text-primary font-medium">React Native &amp; Expo</strong>, en partenariat avec <strong class="text-on-surface font-medium">DonaAyem Tech</strong>.
           </p>
 
           <div class="flex flex-wrap items-center gap-gutter-md pt-gutter-xs">
@@ -271,7 +269,7 @@
               <p class="pl-gutter-md text-on-surface">partenaire: <span class="text-secondary">"DonaAyem Tech"</span>,</p>
               <p class="pl-gutter-md text-on-surface">projetsEnLigne: [<span class="text-secondary">"feeltohome"</span>, <span class="text-secondary">"la-maison-de-la-tele"</span>, <span class="text-secondary">"all-planing"</span>],</p>
               <p class="pl-gutter-md text-on-surface">stack: [<span class="text-secondary">"Django"</span>, <span class="text-secondary">"React"</span>, <span class="text-secondary">"Expo / RN"</span>, <span class="text-secondary">"Node.js"</span>],</p>
-              <p class="pl-gutter-md text-on-surface">focus: <span class="text-secondary">"Performance, Clean Code &amp; Scale"</span></p>
+              <p class="pl-gutter-md text-on-surface">symbole: <span class="text-secondary">"Fleur de Lotus · Excellence &amp; Rigueur"</span></p>
               <p class="text-on-surface-variant">};</p>
             </div>
           </div>
@@ -279,7 +277,7 @@
       </div>
     </section>
 
-    <!-- 2. À PROPOS (Avec la Fleur de Lotus & Design Carré) -->
+    <!-- 2. À PROPOS (Fleur de Lotus & Design Carré) -->
     <section id="apropos" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20 border-b border-outline-variant">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center">
         <!-- Visual Lotus Flower Card (Carré) -->
@@ -353,7 +351,7 @@
       </div>
     </section>
 
-    <!-- 3. COMPÉTENCES (Carré) -->
+    <!-- 3. COMPÉTENCES (Carré & Font Awesome) -->
     <section id="competences" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20 border-b border-outline-variant">
       <div class="flex flex-col gap-gutter-sm mb-12 max-w-2xl">
         <span class="font-label text-label-md text-primary flex items-center gap-2">
@@ -497,7 +495,7 @@
       </div>
     </section>
 
-    <!-- 4. PROJETS HÉBERGÉS EN LIGNE (Carré & Animé) -->
+    <!-- 4. PROJETS HÉBERGÉS EN LIGNE (Fleur de Lotus sur Lotus Mobile) -->
     <section id="projets" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20 border-b border-outline-variant">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter-md mb-12">
         <div class="flex flex-col gap-gutter-sm max-w-2xl">
@@ -696,24 +694,24 @@
           </footer>
         </article>
 
-        <!-- PROJET 4 : Lotus Mobile (Expo & Supabase) -->
+        <!-- PROJET 4 : Lotus Mobile (AVEC LA FLEUR DE LOTUS AU LIEU DE LA MANETTE) -->
         <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_30px_rgba(0,255,136,0.15)] group">
           <div class="flex flex-col gap-gutter-md">
             
-            <!-- Image animée carrée -->
+            <!-- Image animée carrée : LA FLEUR DE LOTUS ÉPANOUIE -->
             <div class="overflow-hidden border border-outline-variant bg-surface-container-low relative aspect-video">
-              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80" alt="Lotus Mobile - Application Mobile Expo & Supabase" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 filter contrast-105" />
+              <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80" alt="Fleur de Lotus - Application Mobile Lotus" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 filter contrast-110 brightness-95" />
               <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
               
               <!-- Mobile App Badge Carré -->
               <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-high/95 backdrop-blur-md border border-primary/40 text-primary font-label text-xs font-semibold shadow-lg">
-                <span class="w-2 h-2 bg-primary animate-pulse"></span>
-                <span>APPLICATION MOBILE</span>
+                <i class="fa-solid fa-spa text-xs"></i>
+                <span>APPLICATION MOBILE LOTUS</span>
               </div>
 
-              <!-- Quick direct buttons overlay -->
+              <!-- Quick direct button overlay -->
               <div class="absolute bottom-3 right-3 flex items-center gap-2">
-                <a href="https://github.com/lapuissancerochi/lotus" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high border border-outline text-on-surface font-label text-xs font-bold shadow-lg hover:border-primary hover:text-primary transition-colors" title="Code source Lotus">
+                <a href="https://github.com/lapuissancerochi/lotus" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary text-on-primary font-label text-xs font-bold shadow-lg hover:bg-secondary transition-colors" title="Code source Lotus">
                   <i class="fa-brands fa-github"></i>
                   <span>Code source</span>
                 </a>
@@ -723,7 +721,7 @@
             <header class="flex items-start justify-between gap-gutter-sm">
               <div class="flex flex-col gap-gutter-xs">
                 <span class="font-label text-label-md text-primary font-semibold flex items-center gap-1.5">
-                  <i class="fa-solid fa-mobile-screen text-xs"></i> App Mobile · React Native &amp; Supabase
+                  <i class="fa-solid fa-spa text-xs"></i> App Mobile · React Native, Expo &amp; Supabase
                 </span>
                 <h3 class="font-title text-title-lg text-on-surface font-bold">Lotus Mobile App</h3>
               </div>
@@ -735,7 +733,7 @@
             </header>
             
             <p class="font-body text-body-md text-on-surface-variant text-pretty">
-              Application mobile moderne et sécurisée construite avec React Native et Expo Router. Authentification multi-facteurs, base de données Supabase temps réel, gestion d'état centralisée et UI fluide.
+              Application mobile moderne et sécurisée construite avec React Native et Expo Router. Authentification multi-facteurs, base de données Supabase temps réel, gestion d'état centralisée avec Zustand et architecture soignée.
             </p>
           </div>
 
@@ -755,7 +753,7 @@
       </div>
     </section>
 
-    <!-- 5. PARCOURS (Timeline expérience Carrée) -->
+    <!-- 5. PARCOURS (Timeline expérience Carrée & Font Awesome) -->
     <section id="parcours" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20 border-b border-outline-variant">
       <div class="flex flex-col gap-gutter-sm mb-12 max-w-2xl">
         <span class="font-label text-label-md text-primary flex items-center gap-2">
@@ -821,7 +819,7 @@
       </div>
     </section>
 
-    <!-- 6. CONTACT (Carré) -->
+    <!-- 6. CONTACT (Carré & Font Awesome) -->
     <section id="contact" class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-20">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-start">
         <div class="lg:col-span-5 flex flex-col gap-gutter-lg">
@@ -929,7 +927,7 @@
 
   </main>
 
-  <!-- 7. FOOTER Carré -->
+  <!-- 7. FOOTER Carré & Font Awesome -->
   <footer class="border-t border-outline-variant bg-surface-container-low">
     <div class="max-w-6xl mx-auto px-gutter-md md:px-page-margin py-8 flex flex-col sm:flex-row items-center justify-between gap-gutter-md">
       <div class="flex items-center gap-gutter-sm">
