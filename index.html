@@ -467,19 +467,108 @@
         <article class="h-full flex flex-col justify-between gap-gutter-md p-gutter-lg bg-surface-container border border-outline-variant transition-all hover:border-primary hover:shadow-[0_0_30px_rgba(0,255,136,0.15)] group">
           <div class="flex flex-col gap-gutter-md">
             
-            <!-- Image animée carrée : LA FLEUR DE LOTUS ÉPANOUIE -->
-            <div class="overflow-hidden border border-outline-variant bg-surface-container-low relative aspect-video">
-              <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80" alt="Fleur de Lotus - Application Mobile Lotus" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 filter contrast-110 brightness-95" />
-              <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
-              
-              <!-- Mobile App Badge Carré -->
-              <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-high/95 backdrop-blur-md border border-primary/40 text-primary font-label text-xs font-semibold shadow-lg">
-                <i class="fa-solid fa-spa text-xs"></i>
+            <!-- Image animée carrée : SMARTPHONE AVEC ICÔNES DONT LA FLEUR DE LOTUS -->
+            <div class="overflow-hidden border border-outline-variant bg-surface-container-low relative aspect-video flex items-center justify-center p-2 group">
+              <!-- Dark gradient background -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-[#003919]/40 via-[#0A0A0A] to-[#1E2220] opacity-90"></div>
+
+              <!-- Smartphone Mockup -->
+              <div class="relative w-64 sm:w-72 h-full border border-outline bg-[#0D1110] p-2 flex flex-col justify-between shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10">
+                <!-- Phone Top Bar -->
+                <div class="flex items-center justify-between px-2 pb-1 border-b border-outline/40 font-label text-[9px] text-on-surface-variant">
+                  <span>09:41</span>
+                  <div class="w-10 h-0.5 bg-outline"></div>
+                  <div class="flex items-center gap-1">
+                    <i class="fa-solid fa-wifi text-[8px]"></i>
+                    <i class="fa-solid fa-battery-full text-[8px] text-primary"></i>
+                  </div>
+                </div>
+
+                <!-- Grid des Icônes d'Applications -->
+                <div class="grid grid-cols-4 gap-2 py-1.5 px-1 text-center">
+                  <!-- App 1: Messages -->
+                  <div class="flex flex-col items-center gap-0.5">
+                    <div class="w-8 h-8 bg-surface-container-high border border-outline flex items-center justify-center text-primary text-xs">
+                      <i class="fa-solid fa-message"></i>
+                    </div>
+                    <span class="font-label text-[8px] text-on-surface-variant">Messages</span>
+                  </div>
+
+                  <!-- App 2: LOTUS APP avec Image Fleur de Lotus -->
+                  <div class="flex flex-col items-center gap-0.5 relative">
+                    <span class="absolute -top-1 -right-1 w-2 h-2 bg-primary animate-ping"></span>
+                    <div class="w-8 h-8 bg-primary-container border border-primary flex items-center justify-center shadow-[0_0_10px_#00FF88] overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=120&q=80" alt="Lotus App" class="w-full h-full object-cover" />
+                    </div>
+                    <span class="font-label text-[8px] text-primary font-bold">Lotus</span>
+                  </div>
+
+                  <!-- App 3: Caméra -->
+                  <div class="flex flex-col items-center gap-0.5">
+                    <div class="w-8 h-8 bg-surface-container-high border border-outline flex items-center justify-center text-on-surface-variant text-xs">
+                      <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <span class="font-label text-[8px] text-on-surface-variant">Photo</span>
+                  </div>
+
+                  <!-- App 4: Stats -->
+                  <div class="flex flex-col items-center gap-0.5">
+                    <div class="w-8 h-8 bg-surface-container-high border border-outline flex items-center justify-center text-on-surface-variant text-xs">
+                      <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <span class="font-label text-[8px] text-on-surface-variant">Stats</span>
+                  </div>
+
+                  <!-- App 5: Navigateur -->
+                  <div class="flex flex-col items-center gap-0.5">
+                    <div class="w-8 h-8 bg-surface-container-high border border-outline flex items-center justify-center text-on-surface-variant text-xs">
+                      <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <span class="font-label text-[8px] text-on-surface-variant">Web</span>
+                  </div>
+
+                  <!-- App 6: Musique -->
+                  <div class="flex flex-col items-center gap-0.5">
+                    <div class="w-8 h-8 bg-surface-container-high border border-outline flex items-center justify-center text-on-surface-variant text-xs">
+                      <i class="fa-solid fa-music"></i>
+                    </div>
+                    <span class="font-label text-[8px] text-on-surface-variant">Audio</span>
+                  </div>
+
+                  <!-- App 7: Calendrier -->
+                  <div class="flex flex-col items-center gap-0.5">
+                    <div class="w-8 h-8 bg-surface-container-high border border-outline flex items-center justify-center text-on-surface-variant text-xs">
+                      <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <span class="font-label text-[8px] text-on-surface-variant">Agenda</span>
+                  </div>
+
+                  <!-- App 8: Réglages -->
+                  <div class="flex flex-col items-center gap-0.5">
+                    <div class="w-8 h-8 bg-surface-container-high border border-outline flex items-center justify-center text-on-surface-variant text-xs">
+                      <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <span class="font-label text-[8px] text-on-surface-variant">Réglages</span>
+                  </div>
+                </div>
+
+                <!-- Phone Bottom Bar -->
+                <div class="px-2 pt-1 border-t border-outline/30 flex items-center justify-around text-on-surface-variant text-[11px]">
+                  <i class="fa-solid fa-phone text-primary"></i>
+                  <i class="fa-solid fa-envelope"></i>
+                  <i class="fa-solid fa-folder"></i>
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+              </div>
+
+              <!-- Live Badge Carré -->
+              <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-high/95 backdrop-blur-md border border-primary/40 text-primary font-label text-xs font-semibold shadow-lg z-20">
+                <i class="fa-solid fa-mobile-screen-button text-xs"></i>
                 <span>APPLICATION MOBILE LOTUS</span>
               </div>
 
               <!-- Quick direct button overlay -->
-              <div class="absolute bottom-3 right-3 flex items-center gap-2">
+              <div class="absolute bottom-3 right-3 flex items-center gap-2 z-20">
                 <a href="https://github.com/lapuissancerochi/lotus" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary text-on-primary font-label text-xs font-bold shadow-lg hover:bg-secondary transition-colors" title="Code source Lotus">
                   <i class="fa-brands fa-github"></i>
                   <span>Code source</span>
@@ -665,12 +754,12 @@
 
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-gutter-md pt-2">
               <button type="submit" class="inline-flex items-center justify-center gap-gutter-sm px-gutter-lg py-3 bg-primary text-on-primary font-label text-label-lg font-semibold transition-all duration-state-change hover:bg-secondary hover:shadow-[0_0_20px_rgba(0,255,136,0.3)]">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
-                <span>Envoyer sur WhatsApp</span>
+                <i class="fa-solid fa-paper-plane text-sm"></i>
+                <span>Envoyer le message</span>
               </button>
 
               <p id="form-feedback" class="hidden font-label text-label-md text-primary flex items-center gap-1.5" role="status">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Redirection vers WhatsApp en cours...
+                <i class="fa-solid fa-paper-plane text-sm"></i> Redirection vers WhatsApp en cours...
               </p>
             </div>
           </form>
